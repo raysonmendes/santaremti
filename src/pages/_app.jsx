@@ -1,12 +1,10 @@
-/* Incio dos imports*/
 import Head from "next/head";
 import Header from "../components/Header";
+import { GlobalStyle } from "../styles/global";
 
-import Menu from "../components/Menu";
-/* Fim dos imports*/
-function Home() {
+const MyApp = ({ Component, pageProps }) => {
   return (
-    <div>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="robots" content="index, follow" />
@@ -19,10 +17,11 @@ function Home() {
         <title>Santarém TI</title>
       </Head>
       <Header />
-      <Menu />
-      <div></div>
-    </div>
+      <div>sidebar</div>
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </>
   );
-}
+};
 
-export default Home;
+export default MyApp;
