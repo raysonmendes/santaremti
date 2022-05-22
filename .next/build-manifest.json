@@ -30,6 +30,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/cliente": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/cliente.js"
+    ],
+    "/profissional": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/profissional.js"
+    ],
     "/servicos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
