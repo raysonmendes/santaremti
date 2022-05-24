@@ -1,13 +1,19 @@
-import Menu from "../Menu";
-import { Container } from "./styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import NextHead from 'next/head';
 
-const Header = () => {
+function Head({title}) {
   return (
-    <Container>
-      <div>Raysin</div>
-      <Menu />
-    </Container>
+    <NextHead>
+      <title>
+        {title}
+      </title>
+    </NextHead>
   );
-};
+}
 
-export default Header;
+Head.PropTypes ={
+  title: PropTypes.string.isRequired,
+}
+
+export default Head;

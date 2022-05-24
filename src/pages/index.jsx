@@ -1,8 +1,9 @@
-/* Incio dos imports*/
-import Head from "next/head";
-import Header from "../components/Header";
-
-/* Fim dos imports*/
+import Head from '../components/Header'
 export default function Home() {
-  return <main>home</main>;
+  return <main>
+    <div>
+      <Head title="Home - Santarém TI" />
+    </div>    
+  </main>;
 }
+

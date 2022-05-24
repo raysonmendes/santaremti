@@ -3,14 +3,11 @@ import Head from "next/head";
 
 /* Fim dos imports*/
 function Servicos() {
-  return (
+  return <main>
     <div>
-      <Head>
-        <title>Serviços</title>
-      </Head>
-      Servicos Aqui!
-    </div>
-  );
+      <Head title="Serviços - Santarém TI" />
+    </div>    
+  </main>;
 }
 
 export default Servicos;
