@@ -1,12 +1,13 @@
-/* Incio dos imports*/
-import Head from "next/head";
-/* Fim dos imports*/
+import Head from "../components/Head";
+
 function Sobre() {
-  return <main>
-  <div>
-    <Head title="Sobre - Santarém TI" />
-  </div>    
-</main>;
+  return (
+    <main>
+      <div>
+        <Head title="Sobre - Santarém TI" />
+      </div>
+    </main>
+  );
 }
 
 export default Sobre;

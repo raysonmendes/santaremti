@@ -1,13 +1,16 @@
-/* Incio dos imports*/
-import Head from "next/head";
-import Menu from "../components/Menu";
-/* Fim dos imports*/
+import Head from "../components/Head";
+
 function Profissional() {
-  return <main>
+  return (
     <div>
       <Head title="Profissional - Santarém TI" />
-    </div>    
-  </main>;
+
+      <main>
+        {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
+      </main>
+      {/* <Footer /> */}
+    </div>
+  );
 }
 
 export default Profissional;

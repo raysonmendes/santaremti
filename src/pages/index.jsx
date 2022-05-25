@@ -1,9 +1,14 @@
-import Head from '../components/Header'
+import Head from "../components/Head";
+
 export default function Home() {
-  return <main>
+  return (
     <div>
       <Head title="Home - Santarém TI" />
-    </div>    
-  </main>;
-}
 
+      <main>
+        {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
+      </main>
+      {/* <Footer /> */}
+    </div>
+  );
+}

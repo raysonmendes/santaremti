@@ -1,12 +1,17 @@
 /* Incio dos imports*/
-import Head from "next/head";
+import Head from "../components/Head";
 
 /* Fim dos imports*/
 function Cliente() {
-  return <main>
+  return (
     <div>
       <Head title="Cliente - Santarém TI" />
-    </div>    
-  </main>;
+
+      <main>
+        {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
+      </main>
+      {/* <Footer /> */}
+    </div>
+  );
 }
 export default Cliente;

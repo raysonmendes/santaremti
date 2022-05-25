@@ -1,19 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import NextHead from 'next/head';
-
-function Head({title}) {
+import React from "react";
+import Menu from "../Menu";
+function Header() {
   return (
-    <NextHead>
-      <title>
-        {title}
-      </title>
-    </NextHead>
+    <div>
+      <Menu />
+    </div>
   );
 }
 
-Head.PropTypes ={
-  title: PropTypes.string.isRequired,
-}
-
-export default Head;
+export default Header;
