@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-function Typografy({ cildren }){
-    return (
-        <p>
-            {cildren}
-        </p>
-    );
+function Typography({ children }) {
+  return <p>{children}</p>;
 }
 
-export default Typografy;
+Typography.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Typography;

@@ -1,14 +1,14 @@
 import Head from "../components/Head";
-
+import Typography from "../components/foundation/Typography";
 export default function Home() {
   return (
-    <div>
+    <>
       <Head title="Home - Santarém TI" />
-
       <main>
-        {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
+        <Typography>E Aqui vai um textinho só de boas!</Typography>
       </main>
+
       {/* <Footer /> */}
-    </div>
+    </>
   );
 }

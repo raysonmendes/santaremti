@@ -1,12 +1,12 @@
 /* Incio dos imports*/
 import Head from "../components/Head";
+import Header from "../components/Header";
 
-/* Fim dos imports*/
 function Cliente() {
   return (
     <div>
       <Head title="Cliente - Santarém TI" />
-
+      <Header />
       <main>
         {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
       </main>
