@@ -6,7 +6,7 @@ const StyledLogo = styled.section`
   left: 20px;
   top: 25%;
 `;
-const Text = styled.title`
+const Text = styled.h1`
   display: flex;
   font-style: normal;
   font-size: 24px;

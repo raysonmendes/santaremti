@@ -5,7 +5,7 @@ const linkStyle = {
   marginRight: 15,
 };
 
-const StyledMenu = styled.menu`
+const StyledMenu = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,7 +17,7 @@ const StyledMenu = styled.menu`
   left: 810px;
 `;
 
-const Text = styled.text`
+const Text = styled.h1`
   margin: 0 25px;
   color: #223459;
   font-style: normal;
