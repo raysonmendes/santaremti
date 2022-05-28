@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <Conteudo>
       <Head title="Home - Santarém TI" />
-      <main>
+      <>
         <Introducao>
           <Saudacao>
             Bem vindo à <SaudacaoC2> Santarém TI</SaudacaoC2>
@@ -90,7 +90,7 @@ export default function Home() {
           </SubIntro2>
           <Imagem href="../public/img-homepage-01.jpg" />
         </Introducao>
-      </main>
+      </>
 
       {/* <Footer /> */}
     </Conteudo>
