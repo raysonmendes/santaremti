@@ -13,7 +13,7 @@ const Conteudo = styled.div`
 const Introducao = styled.div`
   top: 99px;
 `;
-const Saudacao = styled.text`
+const Saudacao = styled.h2`
   display: flex;
   position: absolute;
   justify-content: center;
@@ -29,18 +29,18 @@ const SaudacaoC2 = styled.text`
   color: #223459;
   margin-left: 20px;
 `;
-const SubIntro2 = styled.div`
+const SubIntro2 = styled.article`
   display: flex;
   position: absolute;
   top: 60px;
   left: 0;
 `;
-const TextoP = styled.text`
+const TextoP = styled.p`
   height: 50%;
   font-size: 32px;
   color: #212121;
 `;
-const Botoes = styled.button`
+const Botoes = styled.div`
   left: 0;
   top: 300px;
   width: 600px;
@@ -76,9 +76,8 @@ export default function Home() {
       <Head title="Home - Santarém TI" />
       <>
         <Introducao>
-          <Saudacao>
-            Bem vindo à <SaudacaoC2> Santarém TI</SaudacaoC2>
-          </Saudacao>
+          <Saudacao>Bem vindo à</Saudacao>
+          <SaudacaoC2> Santarém TI</SaudacaoC2>
           <SubIntro2>
             <TextoP>
               Encontre os melhores profissionais de TI da nossa região.

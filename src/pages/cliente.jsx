@@ -6,7 +6,7 @@ function Cliente() {
   return (
     <div>
       <Head title="Cliente - Santarém TI" />
-      <Header />
+
       <main>
         {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
       </main>
