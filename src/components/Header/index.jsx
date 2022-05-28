@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../Menu";
 import Logo from "../Logo";
 import styled from "styled-components";
-import ObjUser from "../User";
+// import ObjUser from "../User";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -20,7 +20,7 @@ function Header() {
     <StyledHeader>
       <Logo />
       <Menu />
-      <ObjUser />
+      {/* <ObjUser /> */}
     </StyledHeader>
   );
 }
