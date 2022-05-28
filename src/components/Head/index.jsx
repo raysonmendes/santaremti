@@ -1,27 +1,28 @@
 import React from "react";
 import propTypes from "prop-types";
 import NextHead from "next/head";
-import HeadNext from "next";
-function Head({ title }) {
+
+function Head({ title, description }) {
   return (
     <>
       <NextHead>
-        <title>{title}</title>
+        <title>{title ? title : "Santarém TI"}</title>
+        <meta charSet="utf-8" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content={
+            description
+              ? description
+              : "Plataforma para conectar profissionais e clientes que buscam serviços de Tecnologia da Informação."
+          }
+        />
+        <meta name="author" content="Rayson - Mendes" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </NextHead>
     </>
   );
 }
-
-<HeadNext>
-  <meta charSet="utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta
-    name="description"
-    content="Plataforma para conectar profissional com clinetes de TI"
-  />
-  <meta name="author" content="Rayson - Mendes" />
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-</HeadNext>;
 
 Head.propTypes = {
   title: propTypes.string.isRequired,
