@@ -1,4 +1,4 @@
-import BT1 from "styled-components";
+import styled from "styled-components";
 
 const BT1 = styled.button`
   width: 245px;

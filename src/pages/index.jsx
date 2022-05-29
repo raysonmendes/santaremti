@@ -8,7 +8,7 @@ import Title2 from "../styles/pg_Home/Title2";
 import SubIntro1 from "../styles/pg_Home/SubIntro1";
 import TextoP from "../styles/pg_Home/TextoP";
 import Button from "../styles/pg_Home/sct-Button";
-import BT1 from "../styles/pg_Home/Title1";
+import BT1 from "../styles/pg_Home/BT1";
 import BT2 from "../styles/pg_Home/BT2";
 import Image from "../styles/pg_Home/sct_Image";
 
