@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const sct_Image = styled.img`
+const sct_Image = styled.div`
   position: absolute;
   top: 94px;
   width: 633px;

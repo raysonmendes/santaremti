@@ -10,7 +10,9 @@ import TextoP from "../styles/pg_Home/TextoP";
 import Button from "../styles/pg_Home/sct-Button";
 import BT1 from "../styles/pg_Home/BT1";
 import BT2 from "../styles/pg_Home/BT2";
-import Image from "../styles/pg_Home/sct_Image";
+import Imagem from "../styles/pg_Home/sct_Image";
+
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,7 +33,16 @@ export default function Home() {
               <BT2>Buscar Solução</BT2>
             </Button>
           </SubIntro1>
-          <Image href="../public/img-homepage-01.jpg" />
+
+          <Imagem>
+            <Image
+              src={"/v1653318928/cld-sample.jpg"}
+              width={633}
+              height={586}
+              objectFit={"cover"}
+              layout="responsive"
+            />
+          </Imagem>
         </Intro>
       </>
 
