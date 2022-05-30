@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const sct_Button = styled.div`
+const sct_Button = styled.ul`
   height: 64px;
   border: none;
   background: none;
