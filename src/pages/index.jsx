@@ -36,10 +36,12 @@ export default function Home() {
 
           <Imagem>
             <Image
-              src={"/v1653318928/cld-sample.jpg"}
+              src={
+                "https://res.cloudinary.com/rayson/image/upload/v1653939863/Santarem%20TI/Home%20Page/img_Homepage_01.jpg"
+              }
               width={633}
               height={586}
-              objectFit={"cover"}
+              objectFit={"fill"}
               layout="responsive"
             />
           </Imagem>
