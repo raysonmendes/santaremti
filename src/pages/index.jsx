@@ -40,7 +40,7 @@ export default function Home() {
               }
               width={633}
               height={586}
-              objectFit={"fill"}
+              objectFit={"cover"}
               layout="responsive"
             />
           </Sct_Image>
