@@ -17,7 +17,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <Sct_Contents>
-      <Head title="Home - Santarém TI" />
+      <Head
+        title="Home - Santarém TI"
+        description="Santarém TI, aqui você encontra os melhores profissionais de TI."
+      />
       <>
         <Sct_Intro>
           <Sct_Title>
