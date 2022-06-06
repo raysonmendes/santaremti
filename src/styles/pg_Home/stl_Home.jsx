@@ -64,9 +64,12 @@ export const BT1 = styled.button`
   width: 245px;
   height: 64px;
   background: #fafafa;
-  border: 1px solid #353d9f;
-  box-shadow: 3px 4px 10px rgba(34, 24, 116, 0.25);
+  border: 1px solid #262626;
+  box-shadow: 3px 4px 10px rgba(38, 38, 38, 0.25);
   border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const BT2 = styled.button`
@@ -74,9 +77,14 @@ export const BT2 = styled.button`
   height: 64px;
   right: 0;
   position: absolute;
-  background: #353d9f;
+  color: #fafafa;
+  background: #262626;
   box-shadow: 3px 4px 10px rgba(34, 24, 116, 0.25);
   border-radius: 8px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Sct_Image = styled.div`

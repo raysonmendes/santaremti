@@ -11,7 +11,7 @@ const Text = styled.h1`
   font-style: normal;
   font-size: 24px;
   line-height: 30px;
-  color: #223459;
+  color: #212121;
 `;
 
 const Logo = () => (

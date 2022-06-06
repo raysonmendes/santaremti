@@ -5,7 +5,6 @@ import {
   Sct_Intro,
   Sct_Title,
   Title1,
-  Title2,
   Sct_SubIntro1,
   TextP,
   Sct_Button,
@@ -22,8 +21,7 @@ export default function Home() {
       <>
         <Sct_Intro>
           <Sct_Title>
-            <Title1>Bem vindo à</Title1>
-            <Title2> Santarém TI</Title2>
+            <Title1>Bem vindo à Santarém TI</Title1>
           </Sct_Title>
           <Sct_SubIntro1>
             <TextP>
@@ -31,7 +29,7 @@ export default function Home() {
             </TextP>
             <Sct_Button>
               <BT1>Tornar-se Colaborador</BT1>
-              <BT2>Buscar Solução</BT2>
+              <BT2>Contratar Serviços</BT2>
             </Sct_Button>
           </Sct_SubIntro1>
 
