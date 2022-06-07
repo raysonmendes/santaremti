@@ -1,52 +1,54 @@
 // Imports
 import Head from "../components/Head";
-import Contents from "../styles/pg_Home/Content";
-import Intro from "../styles/pg_Home/Intro";
-import Title from "../styles/pg_Home/sct__Title";
-import Title1 from "../styles/pg_Home/Title1";
-import Title2 from "../styles/pg_Home/Title2";
-import SubIntro1 from "../styles/pg_Home/SubIntro1";
-import TextoP from "../styles/pg_Home/TextoP";
-import Button from "../styles/pg_Home/sct-Button";
-import BT1 from "../styles/pg_Home/BT1";
-import BT2 from "../styles/pg_Home/BT2";
-import Imagem from "../styles/pg_Home/sct_Image";
-
+import {
+  Section1,
+  Sct_Intro,
+  Sct_Title,
+  Title1,
+  Sct_SubIntro1,
+  TextP,
+  Sct_Button,
+  BT1,
+  BT2,
+  Sct_Image,
+} from "../styles/pg_Home/stl_Home";
 import Image from "next/image";
+//import { Section } from "../styles/stl_Body";
 
 export default function Home() {
   return (
-    <Contents>
-      <Head title="Home - Santarém TI" />
-      <>
-        <Intro>
-          <Title>
-            <Title1>Bem vindo à</Title1>
-            <Title2> Santarém TI</Title2>
-          </Title>
-          <SubIntro1>
-            <TextoP>
+    <>
+      <Head
+        title="Home - Santarém TI"
+        description="Santarém TI, aqui você encontra os melhores profissionais de TI."
+      />
+      <Section1>
+        <Sct_Title>
+          <Title1>Bem vindo à Santarém TI</Title1>
+        </Sct_Title>
+        <Sct_Intro>
+          <Sct_SubIntro1>
+            <TextP>
               Encontre os melhores profissionais de TI da nossa região.
-            </TextoP>
-            <Button>
+            </TextP>
+            <Sct_Button>
               <BT1>Tornar-se Colaborador</BT1>
-              <BT2>Buscar Solução</BT2>
-            </Button>
-          </SubIntro1>
-
-          <Imagem>
+              <BT2>Contratar Serviços</BT2>
+            </Sct_Button>
+          </Sct_SubIntro1>
+          <Sct_Image>
             <Image
-              src={"/v1653318928/cld-sample.jpg"}
+              src={
+                "https://res.cloudinary.com/rayson/image/upload/v1654613155/Santarem%20TI/Home%20Page/img_HomePage03.png"
+              }
               width={633}
               height={586}
               objectFit={"cover"}
               layout="responsive"
             />
-          </Imagem>
-        </Intro>
-      </>
-
-      {/* <Footer /> */}
-    </Contents>
+          </Sct_Image>
+        </Sct_Intro>
+      </Section1>
+    </>
   );
 }

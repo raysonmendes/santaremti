@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body, button{
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Manrope', sans-serif;
         font-weight: 400;
     }
 
@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a{
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Manrope', sans-serif;
         text-decoration: none;
     }
 

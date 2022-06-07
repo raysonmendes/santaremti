@@ -1,18 +1,20 @@
 import Head from "../components/Head";
+import styled from "styled-components";
+const Text = styled.h1`
+  margin: auto;
+  font-family: "Manrope", sans-serif;
+  font-size: xx-large;
+`;
 
 function Servicos() {
   return (
-    <div>
+    <>
       <Head
         title="Serviços - Santarém TI"
         description="Pagina que lista os serviços disponíveis"
       />
-
-      <main>
-        {/*<Typogaphy>E Aqui Vai Um conteúdo de texto !</Typogaphy> */}
-      </main>
-      {/* <Footer /> */}
-    </div>
+      <Text>Pagina em Construção!</Text>
+    </>
   );
 }
 

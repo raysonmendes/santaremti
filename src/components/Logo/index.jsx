@@ -1,17 +1,19 @@
 import styled from "styled-components";
 
 const StyledLogo = styled.section`
-  position: absolute;
-  width: 220px;
-  left: 20px;
-  top: 25%;
+  position: relative;
+  width: 155px;
+  margin: 15px;
+  align-content: center;
 `;
 const Text = styled.h1`
+  font-family: "Manrope", sans-serif;
   display: flex;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
-  line-height: 30px;
-  color: #223459;
+  line-height: 29px;
+  color: #212121;
 `;
 
 const Logo = () => (
