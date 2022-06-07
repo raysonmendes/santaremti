@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 export const Sct_Footer = styled.div`
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 60px;
   left: 0;
-  top: 1030px;
+  //top: auto;
   background: #ffffff;
   border: 1px solid #d6d6d6;
   flex-direction: column;
+  bottom: 0;
 `;
 
 export const Author = styled.div`
@@ -18,7 +19,7 @@ export const Author = styled.div`
   height: 30px;
   margin: auto;
   position: relative;
-  width: 40%;
+  width: 80%;
 `;
 
 export const Text = styled.p`

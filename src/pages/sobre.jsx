@@ -1,6 +1,6 @@
 import Head from "../components/Head";
 import {
-  Sct_Contents,
+  Section1,
   Sct_Image,
   Sct_Text,
   Title,
@@ -10,16 +10,19 @@ import Image from "next/image";
 
 function Sobre() {
   return (
-    <main>
-      <Head title="Sobre - Santarém TI" />
-      <Sct_Contents>
+    <>
+      <Head
+        title="Sobre - Santarém TI"
+        description="Nessa página Você saberá um pouco mais sobre o projeto Snatarém TI"
+      />
+      <Section1>
         <Sct_Image>
           <Image
             src={
-              "https://res.cloudinary.com/rayson/image/upload/v1653939840/Santarem%20TI/Home%20Page/img_Homepage_02.jpg"
+              "https://res.cloudinary.com/rayson/image/upload/v1653939840/Santarem%20TI/Home%20Page/img_Homepage_04.jpg"
             }
-            width={633}
-            height={586}
+            width={577}
+            height={577}
             objectFit={"cover"}
             layout="responsive"
           />
@@ -37,8 +40,8 @@ function Sobre() {
             voluptatem sequi nesciunt.
           </Text>
         </Sct_Text>
-      </Sct_Contents>
-    </main>
+      </Section1>
+    </>
   );
 }
 

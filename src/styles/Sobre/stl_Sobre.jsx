@@ -1,39 +1,36 @@
 import styled from "styled-components";
 
-export const Sct_Contents = styled.div`
-  display: flex;
+export const Section1 = styled.div`
   position: relative;
-  width: 1200px;
-  top: 281px;
-  left: 360px;
-  right: 360px;
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  height: 60.1%;
+  margin: auto;
 `;
+
 export const Sct_Image = styled.div`
-  position: absolute;
-  top: 0px;
-  width: 633px;
-  height: 586px;
-  margin-left: 0;
+  position: relative;
+  width: 577px;
+  margin: auto;
 `;
 export const Sct_Text = styled.section`
   display: flex;
-  top: 0px;
-  position: absolute;
+  position: relative;
   flex-direction: column;
-  width: 512px;
-  right: 0;
+  width: 570px;
+  height: 252px;
+  margin: auto;
 `;
 export const Title = styled.h2`
-  font-family: "Barlow" sans-serif;
+  font-style: normal;
   font-size: 32px;
-  line-height: 36px;
+  line-height: 38px;
   color: #262626;
 `;
 export const Text = styled.p`
   margin-top: 25px;
-  font-family: "Manrope" sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   line-height: 27px;
   color: #212121;
