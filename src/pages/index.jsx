@@ -39,12 +39,12 @@ export default function Home() {
           <Sct_Image>
             <Image
               src={
-                "https://res.cloudinary.com/rayson/image/upload/v1654613155/Santarem%20TI/Home%20Page/img_HomePage03.png"
+                "https://res.cloudinary.com/rayson/image/upload/v1654613155/Santarem%20TI/Home%20Page/img_Home.png"
               }
-              width={633}
-              height={586}
+              width={550}
+              height={550}
               objectFit={"cover"}
-              layout="responsive"
+              layout="fixed"
             />
           </Sct_Image>
         </Sct_Intro>
