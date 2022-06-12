@@ -1,6 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 import NextHead from "next/head";
+import Image from "next/image";
 
 function Head({ title, description }) {
   return (
@@ -23,6 +24,10 @@ function Head({ title, description }) {
         />
         <meta name="author" content="Rayson - Mendes" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          rel="shortcut icon"
+          href="https://res.cloudinary.com/rayson/image/upload/v1655049181/Santarem%20TI/FaveIcon/favicon.ico"
+        />
       </NextHead>
     </>
   );
