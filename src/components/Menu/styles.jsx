@@ -3,25 +3,25 @@ import styled from "styled-components";
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: row;
-  //justify-content: center;
-  //align-items: center;
-  //padding: 16px 32px;
-  gap: 10px;
-  position: relative;
-  width: 275px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: 238.59px;
   align-self: center;
-  margin: auto 33.25%;
 `;
 
 export const Text = styled.h1`
-  font-family: "Manrope", sans-serif;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #212121;
-  width: 65px;
-  margin: auto;
+  font-size: 0.78rem;
+  line-height: 1.08rem;
+  color: #040f0f;
+  //width: 65px;
+  padding: 8.68px;
+  //margin: auto;
   text-align: center;
   &:hover {
     font-weight: 700;

@@ -2,26 +2,21 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const StyledLogo = styled.section`
-  //position: relative;
-  //width: 155px;
-  //margin: 15px;
   margin-left: 4.07%;
-  //margin-top: 1%;
-  //align-content: center;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 0.625rem;
   justify-content: center;
   align-items: center;
 `;
 const Text = styled.h1`
-  font-family: "Manrope", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 1.57rem;
-  color: #212121;
+  color: #040f0f;
 `;
 
 const Logo = () => (
