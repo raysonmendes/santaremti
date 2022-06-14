@@ -7,10 +7,10 @@ function Head({ title, description }) {
   return (
     <>
       <NextHead>
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
         <title>{title ? title : "Santarém TI"}</title>
         <meta charSet="utf-8" />
         <meta name="robots" content="index, follow" />
