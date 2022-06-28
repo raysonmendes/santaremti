@@ -19,7 +19,7 @@ function Sobre() {
         <Sct_Image>
           <Image
             src={
-              "https://res.cloudinary.com/rayson/image/upload/v1653939840/Santarem%20TI/Home%20Page/img_Homepage_04.jpg"
+              "https://res.cloudinary.com/rayson/image/upload/v1654978288/Santarem%20TI/Sobre/img_Sobre.png"
             }
             width={577}
             height={577}

@@ -14,7 +14,7 @@ export const Sct_Footer = styled.div`
 `;
 
 export const Author = styled.div`
-  display: flex;
+  display: none;
   flex-direction: row;
   height: 30px;
   margin: auto;
