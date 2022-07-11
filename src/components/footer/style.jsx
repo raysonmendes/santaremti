@@ -36,9 +36,6 @@ export const Button = styled.button`
     props.isActive === true
       ? "#ffffff #000000 #ffffff #ffffff;"
       : "#ffffff #ffffff #ffffff #000000;"};
-  width: 0;
-  height: 0;
-  border-style: solid;
 `;
 
 export const Author = styled.div`
