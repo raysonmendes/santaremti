@@ -45,7 +45,7 @@ export const Author = styled.div`
   display: ${(props) => (props.isActive === true ? "flex" : "none")};
   flex-direction: column;
   align-items: flex-start;
-  transition: opacity 0.25s;
+  transition: display 0.25s;
 `;
 
 export const Text = styled.p`
