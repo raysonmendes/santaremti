@@ -3,7 +3,7 @@ import {
   Author,
   Text,
   Button,
-  Sct_Author,
+  SctAuthor,
   Sct_Help,
 } from "../footer/style";
 import Image from "next/image";
@@ -22,15 +22,14 @@ const Footer = () => {
   };
   return (
     <Sct_Footer>
-      <Sct_Author isActive={isActive} onSetIsActive={handleIsActive}>
-        <Button onClick={onSetIsActive()} />
-
+      <SctAuthor isActive={isActive} onSetIsActive={handleIsActive}>
+        <Button onClick={handleIsActive} isActive={isActive} />
         <Author>
           <Text>Developer Rayson Nascimento Mendes.</Text>
           <Text>Designer Maxine de Aguiar Fernades</Text>
           <Text>Collaborator Marcos Paulo Amorim</Text>
         </Author>
-      </Sct_Author>
+      </SctAuthor>
       <Text>COPYRIGHT © Todos os direitos reservados. 2022.</Text>
       <Sct_Help>
         <Image

@@ -14,36 +14,40 @@ export const Sct_Footer = styled.div`
   bottom: 0;
 `;
 
-export const Sct_Author = styled.div`
+export const SctAuthor = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => (props.isActive === true ? "blue" : "green")};
   width: 224px;
   gap: 1rem;
-  transition: 5s;
-  :active {
+  transition: 0.3s;
+
+  flex-direction: ${(props) => props.isActive && "row-reverse"};
+  animation: ${(props) => props.isActive && "both"};
+  animation-duration: ${(props) => props.isActive && "0.5s"};
+  /* :active {
     flex-direction: row-reverse;
     animation: both;
     animation-duration: 0.5s;
-  }
+  } */
 `;
 
-export const Button = styled.button`
+export const Button = styled.div`
   cursor: pointer;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 7px 0 7px 14px;
+  border-width: ${(props) =>
+    props.isActive ? "7px 14px 7px 0" : "7px 0 7px 14px"};
   border-color: #ffffff #ffffff #ffffff #000000;
   transition: 0.3s;
-  :active {
+  /* :active {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 7px 14px 7px 0;
+    border-width: ;
     border-color: #ffffff #ff0000 #ffffff #ffffff;
-  }
+  } */
 `;
 
 export const Author = styled.div`
