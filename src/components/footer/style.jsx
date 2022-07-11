@@ -21,7 +21,6 @@ export const Sct_Author = styled.div`
     props.isActive === true ? "row-reverse" : "row"};
   justify-content: center;
   align-items: center;
-  width: 224px;
   gap: 1rem;
 `;
 
@@ -43,10 +42,9 @@ export const Button = styled.button`
 `;
 
 export const Author = styled.div`
-  display: flex;
+  display: ${(props) => (props.isActive === true ? "flex" : "none")};
   flex-direction: column;
   align-items: flex-start;
-  opacity: ${(props) => (props.isActive === true ? "100%;" : "0;")};
   transition: opacity 0.25s;
 `;
 
