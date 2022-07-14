@@ -107,7 +107,6 @@ export const BT1 = styled.button`
 
 export const BT2 = styled.button`
   position: relative;
-  /* width: 45%; */
   width: 15.3125rem;
   height: 64px;
   right: 0;
