@@ -20,6 +20,7 @@ export const Sct_Author = styled.div`
   align-items: center;
   //width: 226px;
   gap: 1rem;
+  translate: 2.4rem;
 `;
 
 export const Button = styled.button`
