@@ -22,9 +22,15 @@ const Footer = () => {
         <Button isActive={isActive} onClick={handleIsActive} />
 
         <Author isActive={isActive}>
-          <Text>Developer Rayson Nascimento Mendes.</Text>
-          <Text>Designer Maxine de Aguiar Fernades</Text>
-          <Text>Collaborator Marcos Paulo Amorim</Text>
+          <Text>
+            <strong>Developer</strong> Rayson Nascimento Mendes.
+          </Text>
+          <Text>
+            <strong>Designer</strong> Maxine de Aguiar Fernandes
+          </Text>
+          <Text>
+            <strong>Collaborator</strong> Marcos Paulo Amorim
+          </Text>
         </Author>
       </Sct_Author>
       <Text>COPYRIGHT © Todos os direitos reservados. 2022.</Text>
