@@ -19,8 +19,6 @@ const Footer = () => {
   return (
     <Sct_Footer>
       <Sct_Author isActive={isActive}>
-        <Button isActive={isActive} onClick={handleIsActive} />
-
         <Author isActive={isActive}>
           <Text>
             <strong>Developer</strong> Rayson Nascimento Mendes.
@@ -32,6 +30,7 @@ const Footer = () => {
             <strong>Collaborator</strong> Marcos Paulo Amorim
           </Text>
         </Author>
+        <Button isActive={isActive} onClick={handleIsActive} />
       </Sct_Author>
       <Text>COPYRIGHT © Todos os direitos reservados. 2022.</Text>
       <Sct_Help>
