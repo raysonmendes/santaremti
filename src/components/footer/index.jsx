@@ -13,7 +13,6 @@ const Footer = () => {
 
   const handleIsActive = () => {
     setIsActive(!isActive);
-    console.log("isActive", isActive);
   };
 
   return (
