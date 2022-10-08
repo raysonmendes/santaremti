@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 const StyledLogo = styled.section`
   margin-left: 4.07%;
@@ -17,6 +18,8 @@ const Text = styled.h1`
   font-size: 1.3rem;
   line-height: 1.57rem;
   color: #040f0f;
+
+  cursor: pointer;
 `;
 
 const Logo = () => (
@@ -28,7 +31,9 @@ const Logo = () => (
       objectFit={"cover"}
       layout="fixed"
     />
-    <Text>Santarém TI</Text>
+    <Link href={"/"}>
+      <Text>Santarém TI</Text>
+    </Link>
   </StyledLogo>
 );
 
