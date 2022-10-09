@@ -10,21 +10,56 @@ import {
   User_Image,
   User_Name,
   Bt_Menu,
+  Dropdown_Menu,
 } from "./styles";
 import Wrapper from "../wrapper";
+import { useEffect, useRef, useState } from "react";
 
 const UserHeader = () => {
   const { data: session } = useSession();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  //cria refs pra monitorar cliques fora do menu de dropdown
+  const buttonMenuRef = useRef(null);
+  const dropdownMenuRef = useRef(null);
+  //chama hook que monitora os cliques fora do botao e menu
+  useOutSide(buttonMenuRef, dropdownMenuRef);
+
+  //retorna o primeiro nome
   const getFirstName = (name) => {
     let first = name.split(" ")[0];
-
     return first;
   };
 
+  //faz logout da conta logada
   const handleLogout = () => {
     signOut();
   };
+
+  //abre ou fecha o menu dropdown
+  const toggleDropdownMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  //hook criado para monitorar os cliques fora do menu e do botão de dropdown
+  //quando um clique fora acontece, o menu é fechado
+  function useOutSide(btnRef, dropRef) {
+    useEffect(() => {
+      //função que adiciona listener de clique que verifiqua se os elementos referenciados recebem clique fora
+      function handleOutside(event) {
+        if (
+          btnRef.current &&
+          dropRef.current &&
+          !btnRef.current.contains(event.target) &&
+          !dropRef.current.contains(event.target)
+        ) {
+          //atualiza o estado do menu para fechado
+          setIsMenuOpen(false);
+        }
+      }
+      document.addEventListener("click", handleOutside);
+    }, [btnRef, dropRef]);
+  }
 
   return (
     <Container>
@@ -36,13 +71,23 @@ const UserHeader = () => {
             width={25}
             height={25}
           />
-
           <User_Name>
             <Wrapper>{getFirstName(session.user.name)}</Wrapper>
           </User_Name>
-          <Bt_Menu>
+          <Bt_Menu onClick={toggleDropdownMenu} ref={buttonMenuRef}>
             <img src="/down.svg" alt="dropdown button" />
           </Bt_Menu>
+
+          <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
+            <ul>
+              <li>
+                <Wrapper>Perfil</Wrapper>
+              </li>
+              <li onClick={handleLogout}>
+                <Wrapper>Sair</Wrapper>
+              </li>
+            </ul>
+          </Dropdown_Menu>
           {/* <button onClick={handleLogout}>sair</button> */}
         </Logged>
       ) : (
