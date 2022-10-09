@@ -1,7 +1,10 @@
 import Head from "../components/Head";
+
 import Image from "next/image";
+
 import {
   Btn_Login,
+  Btn_Google,
   Checkbox,
   Container,
   Sct_Email,
@@ -17,6 +20,10 @@ import {
 } from "../styles/pg_Entrar/stl_Entrar";
 
 export default function LoginPage() {
+  const handleSignGoogle = () => {
+    console.log("login with google");
+  };
+
   return (
     <>
       <Head
@@ -49,6 +56,11 @@ export default function LoginPage() {
             <Sct_Forget>Esqueceu a senha?</Sct_Forget>
           </Sct_RememberForget>
           <Btn_Login>Entrar</Btn_Login>
+          ou
+          <Btn_Google onClick={handleSignGoogle}>
+            <img src="/google-logo.svg" alt="me" width={20} height={20} />
+            Entre com o Google
+          </Btn_Google>
           <Stc_SingIn>Não me cadastrei ainda!</Stc_SingIn>
         </Section>
       </Container>

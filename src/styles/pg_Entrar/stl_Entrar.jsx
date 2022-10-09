@@ -55,4 +55,20 @@ export const Sct_Forget = styled.a``;
 
 export const Btn_Login = styled.button``;
 
+export const Btn_Google = styled.button`
+  background-color: #5384ec;
+  width: 21rem;
+  height: 3.375rem;
+  border: 1px solid inherit;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+
+  cursor: pointer;
+`;
+
 export const Stc_SingIn = styled.a``;
