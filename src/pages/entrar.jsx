@@ -1,5 +1,5 @@
 import Head from "../components/Head";
-
+import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 import {
@@ -18,11 +18,25 @@ import {
   Section,
   Stc_SingIn,
 } from "../styles/pg_Entrar/stl_Entrar";
+import { useRouter } from "next/router";
 
 export default function LoginPage() {
+  const { data: session } = useSession();
+  const router = useRouter();
+
   const handleSignGoogle = () => {
     console.log("login with google");
+    console.log("session: ", session);
+
+    signIn();
   };
+
+  console.log("neymar> ", process.env.GOOGLE_ID);
+  console.log("neymar logou> ", session);
+
+  if (session) {
+    router.push("/");
+  }
 
   return (
     <>
