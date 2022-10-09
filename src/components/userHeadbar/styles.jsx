@@ -48,11 +48,16 @@ export const Bt_SingIn = styled.div`
 `;
 
 export const Logged = styled.div`
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 `;
 
 export const User_Image = styled.div``;
 
 export const User_Name = styled.p``;
 
-export const Bt_Menu = styled.button``;
+export const Bt_Menu = styled.div`
+  cursor: pointer;
+`;
