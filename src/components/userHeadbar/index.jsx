@@ -14,6 +14,7 @@ import {
 } from "./styles";
 import Wrapper from "../wrapper";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const UserHeader = () => {
   const { data: session } = useSession();
@@ -65,11 +66,12 @@ const UserHeader = () => {
     <Container>
       {session ? (
         <Logged>
-          <img
-            src="/icon-user.svg"
+          <Image
+            src={session?.user?.image}
             alt="Avatar do usuário"
-            width={25}
-            height={25}
+            width={"25px"}
+            height={"25px"}
+            style={{ borderRadius: "12.5px" }}
           />
           <User_Name>
             <Wrapper>{getFirstName(session.user.name)}</Wrapper>
