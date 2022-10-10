@@ -28,11 +28,8 @@ export default function LoginPage() {
     console.log("login with google");
     console.log("session: ", session);
 
-    signIn();
+    signIn("google");
   };
-
-  console.log("neymar> ", process.env.GOOGLE_ID);
-  console.log("neymar logou> ", session);
 
   if (session) {
     router.push("/");
