@@ -31,9 +31,6 @@ export default function LoginPage() {
     signIn("google");
   };
 
-  console.log("neymar> ", process.env.GOOGLE_ID);
-  console.log("neymar logou> ", session);
-
   if (session) {
     router.push("/");
   }
