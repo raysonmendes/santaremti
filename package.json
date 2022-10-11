@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^1.1.2",
     "mongodb": "^4.7.0",
+    "mongoose": "^6.6.5",
     "next": "^12.1.6",
     "next-auth": "^4.12.3",
     "prop-types": "^15.8.1",
