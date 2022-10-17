@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^1.1.2",
+    "dotenv": "^16.0.3",
     "mongodb": "^4.7.0",
     "mongoose": "^6.6.5",
     "next": "^12.1.6",
