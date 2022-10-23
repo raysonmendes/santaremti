@@ -1,7 +1,7 @@
 import { getToken } from "next-auth/jwt";
-import { getUsers, getUserByEmail } from "../../lib/fetchUsers";
+import getServices from "../../lib/fetchServices";
 import connectToDatabse from "../../lib/mongodb";
-import User from "../../models/user";
+import Service from "../../models/service";
 
 const secret = process.env.JWT_SECRET;
 
@@ -10,17 +10,16 @@ const handler = async (req, res) => {
   //busca o token provido na requisição via cookie
   const token = await getToken({ req, secret });
 
-  // buscar usuários
+  // buscar serviços
   if (req.method === "GET") {
     //verifica o token recebido e retorna os dados em caso de um token valido
     if (token) {
       try {
-        const users = await getUsers();
+        const services = await getServices();
 
-        // console.log("users que veio: ", users);
-        return res.send(users);
+        // console.log("services que veio: ", services);
+        return res.send(services);
       } catch (error) {
-        console.log("erro aconteceyuu oih : ", error);
         return res.status(500).send(error.message);
       }
     }
@@ -30,27 +29,30 @@ const handler = async (req, res) => {
 
   //criar usuario
   if (req.method === "POST") {
-    const { name, email, roles, avatarUri, cpf } = req.body;
+    const { name, description, owner, price, duoDate } = req.body;
 
     if (token) {
       try {
-        var user = new User({
+        var service = new Service({
+          description,
           name,
-          email,
-          roles,
-          avatarUri,
-          cpf,
+          owner,
+          price,
+          duoDate,
         });
 
         //criar novo usuário
-        var createdUser = await user.save();
+        var createdService = await service.save();
 
-        return res.status(200).send(createdUser);
+        return res.status(200).send(createdService);
       } catch (error) {
         return res.status(500).send(error.message);
       }
     }
     return res.status(401).end();
+  }
+  if (req.method === "PUT") {
+    console.log("atualizar recurso");
   } else {
     res.status(422).send("req_method_not_supported");
   }
