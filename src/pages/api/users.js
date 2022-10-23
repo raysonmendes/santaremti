@@ -1,5 +1,5 @@
 import { getToken } from "next-auth/jwt";
-import getUsers from "../../lib/fetchUsers";
+import { getUsers, getUserByEmail } from "../../lib/fetchUsers";
 import connectToDatabse from "../../lib/mongodb";
 import User from "../../models/user";
 

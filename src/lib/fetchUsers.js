@@ -2,7 +2,7 @@ import User from "../models/user";
 import connectToDatabase from "./mongodb";
 
 //busca os usuários no banco de dados
-const getUsers = async () => {
+export const getUsers = async () => {
   await connectToDatabase();
   try {
     const response = await User.find({});
@@ -15,4 +15,17 @@ const getUsers = async () => {
   }
 };
 
-export default getUsers;
+export const getUserByEmail = async (email) => {
+  await connectToDatabase();
+
+  try {
+    const response = await User.find({
+      email: email,
+    });
+
+    console.log("Achei esse usuario: ", reponse);
+  } catch (error) {
+    console.log("Error when getting the user by passed email", error);
+    return error;
+  }
+};

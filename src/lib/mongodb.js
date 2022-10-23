@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI;
+let MONGODB_URI = process.env.MONGODB_URI;
+
+//opcionalmente, e caso se tenha o docker instalado localmente, pode-se usar a string de conexão local do mongodb
+let isDev = false;
+if (isDev) {
+  MONGODB_URI = process.env.MONGODB_URI_LOCAL;
+}
 
 if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI env var");

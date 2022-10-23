@@ -50,6 +50,9 @@ const handler = async (req, res) => {
       }
     }
     return res.status(401).end();
+  }
+  if (req.method === "PUT") {
+    console.log("atualizar recurso");
   } else {
     res.status(422).send("req_method_not_supported");
   }
