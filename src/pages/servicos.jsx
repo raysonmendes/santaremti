@@ -101,6 +101,6 @@ export async function getStaticProps() {
     props: {
       services: JSON.parse(JSON.stringify(data)),
     },
-    revalidate: 10,
+    revalidate: 20,
   };
 }
