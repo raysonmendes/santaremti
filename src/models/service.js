@@ -9,7 +9,7 @@ var service = new Schema({
     type: String,
     required: true,
   },
-  date: {
+  duoDate: {
     type: Date,
     required: false,
   },
@@ -20,6 +20,16 @@ var service = new Schema({
   price: {
     type: Number,
     required: true,
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "Users",
+    required: false,
+  },
+  assignedTo: {
+    type: Schema.Types.ObjectId,
+    ref: "Users",
+    required: false,
   },
 });
 
