@@ -4,36 +4,45 @@ import mongoose from "mongoose";
 //formato do usuário e com as operações que precisaremos fazer no banco de dados
 var Schema = mongoose.Schema;
 
-var user = new Schema({
-  name: {
-    type: String,
-    required: true,
+var user = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    cpf: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    tel: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    roles: {
+      type: Array,
+      required: true,
+      default: ["client"],
+    },
+    avatarUri: {
+      type: String,
+      required: false,
+      default: "",
+    },
   },
-  email: {
-    type: String,
-    required: true,
-  },
-  cpf: {
-    type: String,
-    required: false,
-    default: "",
-  },
-  tel: {
-    type: String,
-    required: false,
-    default: "",
-  },
-  roles: {
-    type: Array,
-    required: true,
-    default: ["client"],
-  },
-  avatarUri: {
-    type: String,
-    required: false,
-    default: "",
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
 mongoose.models = {};
 

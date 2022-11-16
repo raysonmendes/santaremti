@@ -32,12 +32,13 @@ const handler = async (req, res) => {
 
   //criar usuario
   if (req.method === "POST") {
-    const { name, email, roles, avatarUri, cpf } = req.body;
+    const { name, lastName, email, roles, avatarUri, cpf } = req.body;
 
     if (token) {
       try {
         var user = new User({
           name,
+          lastName,
           email,
           roles,
           avatarUri,

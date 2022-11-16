@@ -40,10 +40,39 @@ export const getUserById = async (id) => {
   try {
     const response = await User.findById(id);
 
-    // console.log("user encontrado: ", response);
     return response;
   } catch (error) {
     console.log("Error when getting the user by passed id", error);
+
+    return Promise.reject(error);
+  }
+};
+
+// recebe um id e atualiza o usuário no banco de dados
+export const updateUserById = async (id, data) => {
+  await connectToDatabase();
+  try {
+    const response = await User.findByIdAndUpdate(id, data);
+
+    const user = await getUserById(id);
+    return user;
+  } catch (error) {
+    console.log("Error when updating the user by passed id", error);
+
+    return Promise.reject(error);
+  }
+};
+
+// recebe um id e deleta o usuário no banco de dados
+export const deleteUserById = async (id) => {
+  await connectToDatabase();
+
+  try {
+    const response = await User.findByIdAndDelete(id);
+
+    return response;
+  } catch (error) {
+    console.log("Error when deleting the user by passed id: ", error);
 
     return Promise.reject(error);
   }
