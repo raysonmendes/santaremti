@@ -1,7 +1,7 @@
 import { getToken } from "next-auth/jwt";
-import { getUsers, getUserByEmail } from "../../lib/fetchUsers";
-import connectToDatabse from "../../lib/mongodb";
-import User from "../../models/user";
+import { getUsers, getUserByEmail } from "../../../lib/fetchUsers";
+import connectToDatabse from "../../../lib/mongodb";
+import User from "../../../models/user";
 
 const secret = process.env.JWT_SECRET;
 
@@ -9,6 +9,8 @@ const handler = async (req, res) => {
   await connectToDatabse();
   //busca o token provido na requisição via cookie
   const token = await getToken({ req, secret });
+
+  console.log("veio isso: ", req);
 
   // buscar usuários
   if (req.method === "GET") {
