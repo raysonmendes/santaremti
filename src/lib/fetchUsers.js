@@ -15,6 +15,7 @@ export const getUsers = async () => {
   }
 };
 
+// busca um usuário pelo email
 export const getUserByEmail = async (email) => {
   await connectToDatabase();
 
@@ -23,9 +24,27 @@ export const getUserByEmail = async (email) => {
       email: email,
     });
 
-    console.log("Achei esse usuario: ", reponse);
+    // console.log("Achei esse usuario: ", response);
+
+    return response;
   } catch (error) {
-    console.log("Error when getting the user by passed email", error);
-    return error;
+    // console.log("Error when getting the user by passed email", error);
+    return Promise.reject(error);
+  }
+};
+
+// busca um usuário pelo seu id
+export const getUserById = async (id) => {
+  await connectToDatabase();
+
+  try {
+    const response = await User.findById(id);
+
+    // console.log("user encontrado: ", response);
+    return response;
+  } catch (error) {
+    console.log("Error when getting the user by passed id", error);
+
+    return Promise.reject(error);
   }
 };
