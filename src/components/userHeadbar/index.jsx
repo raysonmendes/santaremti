@@ -98,9 +98,9 @@ const UserHeader = () => {
             <Bt_LogIn>Entrar</Bt_LogIn>
           </CustomizedLink>
 
-          <CustomizedLink link={"/cadastrar"}>
+          {/* <CustomizedLink link={"/cadastrar"}>
             <Bt_SingIn>Cadastrar</Bt_SingIn>
-          </CustomizedLink>
+          </CustomizedLink> */}
         </No_Logged>
       )}
     </Container>

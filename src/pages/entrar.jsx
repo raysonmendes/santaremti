@@ -57,7 +57,7 @@ export default function LoginPage() {
           </Sct_Logo>
           <Sct_Title>Bem Vindo</Sct_Title>
           <Sct_SubTitle>Faça o login da sua conta</Sct_SubTitle>
-          <Sct_Email placeholder="E-mail" />
+          {/* <Sct_Email placeholder="E-mail" />
           <Sct_Passworld placeholder="Senha" />
           <Sct_RememberForget>
             <Sct_Remember>
@@ -67,12 +67,12 @@ export default function LoginPage() {
             <Sct_Forget>Esqueceu a senha?</Sct_Forget>
           </Sct_RememberForget>
           <Btn_Login>Entrar</Btn_Login>
-          ou
+          ou */}
           <Btn_Google onClick={handleSignGoogle}>
             <img src="/google-logo.svg" alt="me" width={20} height={20} />
             Entre com o Google
           </Btn_Google>
-          <Stc_SingIn>Não me cadastrei ainda!</Stc_SingIn>
+          {/* <Stc_SingIn>Não me cadastrei ainda!</Stc_SingIn> */}
         </Section>
       </Container>
     </>

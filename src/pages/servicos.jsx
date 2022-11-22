@@ -3,15 +3,15 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "../components/service-card";
 
 import Head from "../components/Head";
-import styled from "styled-components";
+//import styled from "styled-components";
 
 import getServices from "../lib/fetchServices";
 
-const Text = styled.h1`
-  margin: auto;
-  font-family: "Manrope", sans-serif;
-  font-size: xx-large;
-`;
+import {
+  Container,
+  ServicesCard,
+  Text,
+} from "../styles/pg_Servicos/stl_Servicos";
 
 const servicesFake = [
   {
@@ -58,37 +58,37 @@ function Servicos({ services }) {
   return (
     <>
       <Head
-        title="Serviços - Santarém TI"
-        description="Pagina que lista os serviços disponíveis"
+        title="Serviços Abertos - Santarém TI"
+        description="Pagina que lista os serviços que estão em aberto"
       />
-      <Text>Pagina em Construção!</Text>
-
-      {services &&
-        services?.map((service, index) => (
-          <ServiceCard key={index} data={service} />
-        ))}
+      <Container>
+        {services &&
+          services?.map((service, index) => (
+            <ServiceCard key={index} data={service} font-size="50px" />
+          ))}
+      </Container>
     </>
   );
 }
 
-// export async function getServerSideProps() {
-//   const services = [];
-//   try {
-//     const response = {};
-//     // const response = await getUsers();
+//  export async function getServerSideProps() {
+//    const services = [];
+//    try {
+//      const response = {};
+//      // const response = await getUsers();
 
-//     console.log("serv: ", response);
-//     // services = await response.json();
-//   } catch (error) {
-//     console.log("Error while attempt fetch: ", error);
-//   }
+//      console.log("serv: ", response);
+//      // services = await response.json();
+//    } catch (error) {
+//      console.log("Error while attempt fetch: ", error);
+//    }
 
-//   return {
-//     props: {
-//       services: services,
-//     },
-//   };
-// }
+//    return {
+//      props: {
+//        services: services,
+//      },
+//    };
+//  }
 
 export default Servicos;
 

@@ -5,12 +5,13 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 `;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 700px;
   height: 500px;
@@ -20,8 +21,8 @@ export const Section = styled.div`
 
 export const Sct_Logo = styled.div`
   display: flex;
-  width: 120px;
-  height: 35px;
+  width: 8rem;
+  height: 2.5rem;
   justify-content: center;
   align-items: center;
 `;
@@ -56,7 +57,7 @@ export const Sct_Forget = styled.a``;
 export const Btn_Login = styled.button``;
 
 export const Btn_Google = styled.button`
-  background-color: #5384ec;
+  background-color: #262626;
   width: 21rem;
   height: 3.375rem;
   border: 1px solid inherit;
