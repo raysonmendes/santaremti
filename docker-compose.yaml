@@ -1,0 +1,13 @@
+#este arquivo cria um container docker de uma instância do mongo db para ser utilizada localmente
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=santaremtidomeuamor
+      - MONGO_INITDB_ROOT_PASSWORD=santaremtidomeuamor
+      - MONGO_INITDB_DATABASE=santaremtidomeuamor
+    ports:
+      - 27017:27017

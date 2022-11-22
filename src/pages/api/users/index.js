@@ -1,22 +1,28 @@
 import { getToken } from "next-auth/jwt";
-import connectToDatabse from "../../lib/mongodb";
-import User from "../../models/user";
+import { getUsers, getUserByEmail } from "../../../lib/fetchUsers";
+import connectToDatabse from "../../../lib/mongodb";
+import User from "../../../models/user";
 
 const secret = process.env.JWT_SECRET;
 
 const handler = async (req, res) => {
+  await connectToDatabse();
   //busca o token provido na requisição via cookie
   const token = await getToken({ req, secret });
-  await connectToDatabse();
+
+  console.log("veio isso: ", req);
 
   // buscar usuários
   if (req.method === "GET") {
     //verifica o token recebido e retorna os dados em caso de um token valido
     if (token) {
       try {
-        const users = await User.find({});
+        const users = await getUsers();
+
+        // console.log("users que veio: ", users);
         return res.send(users);
       } catch (error) {
+        console.log("erro aconteceyuu oih : ", error);
         return res.status(500).send(error.message);
       }
     }
@@ -26,12 +32,13 @@ const handler = async (req, res) => {
 
   //criar usuario
   if (req.method === "POST") {
-    const { name, email, roles, avatarUri, cpf } = req.body;
+    const { name, lastName, email, roles, avatarUri, cpf } = req.body;
 
     if (token) {
       try {
         var user = new User({
           name,
+          lastName,
           email,
           roles,
           avatarUri,
