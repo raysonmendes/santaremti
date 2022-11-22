@@ -32,7 +32,7 @@ export default function LoginPage() {
   };
 
   if (session) {
-    router.push("/");
+    router.push("/servicos");
   }
 
   return (

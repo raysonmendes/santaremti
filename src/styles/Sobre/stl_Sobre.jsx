@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const Section1 = styled.div`
-  position: relative;
   display: flex;
-  flex-direction: row;
-  width: 65%;
-  height: 60.1%;
-  margin: auto;
+  max-width: 1200px;
+  min-width: 276px;
+  height: 100vh;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Sct_Image = styled.div`
