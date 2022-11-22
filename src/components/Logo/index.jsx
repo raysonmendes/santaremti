@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import { Container, StyledLogo, Text } from "../logo/styles";
+import { StyledLogo, Text } from "../logo/styles";
 
 const Logo = () => (
-  //<Container>
   <StyledLogo>
     <Image
       src="https://res.cloudinary.com/rayson/image/upload/v1655049181/Santarem%20TI/FaveIcon/favicon.ico"
@@ -17,7 +16,6 @@ const Logo = () => (
       <Text>Santarém TI</Text>
     </Link>
   </StyledLogo>
-  //</Container>
 );
 
 export default Logo;
