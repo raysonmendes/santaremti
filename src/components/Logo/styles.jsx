@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-// export const Container = styled.div`
-//   display: flex;
-//   max-width: 1200px;
-//   min-width: 271px;
-// `;
 export const StyledLogo = styled.div`
-  //margin-left: 4.07%;
   display: flex;
   flex-direction: row;
   gap: 0.625rem;
