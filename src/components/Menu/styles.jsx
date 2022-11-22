@@ -8,7 +8,8 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   gap: 0.625rem;
   width: 238.59px;
-  align-self: center;
+  //align-self: center;
+  justify-self: center;
 `;
 
 export const Text = styled.h1`
