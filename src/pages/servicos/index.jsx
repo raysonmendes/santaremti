@@ -1,38 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import ServiceCard from "../components/service-card";
+import ServiceCard from "../../components/service-card";
 
-import Head from "../components/Head";
+import Head from "../../components/Head";
 //import styled from "styled-components";
 
-import getServices from "../lib/fetchServices";
-
-import {
-  Container,
-  ServicesCard,
-  Text,
-} from "../styles/pg_Servicos/stl_Servicos";
-
-const servicesFake = [
-  {
-    id: "1",
-    name: "Formatação",
-    date: "25/12/2022",
-    description: "Por favor formatem meu note",
-  },
-  {
-    id: "2",
-    name: "Limpeza de sistema",
-    date: "24/12/2022",
-    description: "Por favor limpem meu note",
-  },
-  {
-    id: "3",
-    name: "Instalação do office",
-    date: "04/12/2022",
-    description: "Por favor instalem meu office",
-  },
-];
+import { Container } from "../../styles/pg_Servicos/stl_Servicos";
+import { getServices } from "../../lib/fetchServices";
 
 function Servicos({ services }) {
   // const [serv, setServ] = useState([]);
@@ -71,31 +45,10 @@ function Servicos({ services }) {
   );
 }
 
-//  export async function getServerSideProps() {
-//    const services = [];
-//    try {
-//      const response = {};
-//      // const response = await getUsers();
-
-//      console.log("serv: ", response);
-//      // services = await response.json();
-//    } catch (error) {
-//      console.log("Error while attempt fetch: ", error);
-//    }
-
-//    return {
-//      props: {
-//        services: services,
-//      },
-//    };
-//  }
-
 export default Servicos;
 
 export async function getStaticProps() {
   const data = await getServices();
-
-  console.log("dadoss: ", data);
 
   return {
     props: {
