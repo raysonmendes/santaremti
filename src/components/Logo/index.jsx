@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import { StyledLogo, Text } from "../logo/styles";
+import { StyledLogo, Text } from "./styles";
 
 const Logo = () => (
   <StyledLogo>
