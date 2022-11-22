@@ -30,14 +30,18 @@ function Sobre() {
         <Sct_Text>
           <Title>Sobre Santarém TI</Title>
           <Text>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.
+            É uma plataforma criada com o intuito de facilitar a comunicação e
+            interação entre usuários e técnicos de TI.
           </Text>
           <Text>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.
+            Para que clientes encontre e escolha os melhores profissionais da
+            região de Santarém-Pa. Uma plataforma onde os técnicos encontrem
+            serviços para realizar, sendo avaliado de acordo com a satisfação
+            dos clientes.
+          </Text>
+          <Text>
+            Uma plataforma onde os técnicos encontrem serviços para realizar,
+            sendo avaliado de acordo com a satisfação dos clientes.
           </Text>
         </Sct_Text>
       </Section1>
