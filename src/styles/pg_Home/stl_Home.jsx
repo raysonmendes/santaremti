@@ -5,8 +5,6 @@ export const Section1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  /* overflow: hidden; */
 `;
 
 export const Sct_Title = styled.div`

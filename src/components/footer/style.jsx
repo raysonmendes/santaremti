@@ -1,26 +1,35 @@
 import styled from "styled-components";
 
-export const Sct_Footer = styled.div`
+export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box;
-  position: fixed;
-  width: 100%;
-  height: 48px;
-  left: 0;
-  background: #ffffff;
-  border: 1px solid #d6d6d6;
-  bottom: 0;
+  flex-direction: row;
+
+  justify-content: center;
+  width: 100vw;
+  height: 3vh;
+  background: #fafafa;
+  box-shadow: 0px -10px 16px rgba(34, 52, 89, 0.22);
 `;
 
-export const Sct_Author = styled.div`
+export const Sct_Footer = styled.div`
+  @media (min-width: 577px) {
+    width: 1200px;
+  }
+  @media (max-width: 576px) {
+    width: 576px;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
-  //width: 226px;
+`;
+
+export const Sct_Author = styled.div`
+  width: 33.33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
-  translate: 2.4rem;
 `;
 
 export const Button = styled.button`
@@ -89,7 +98,7 @@ export const Button = styled.button`
 `;
 
 export const Author = styled.div`
-  display: flex; //${(props) => (props.isActive === true ? "flex" : "none")};
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition-delay: 0.5s;
@@ -165,6 +174,9 @@ export const Text = styled.p`
 
 export const Sct_Help = styled.div`
   display: flex;
+
+  width: 33.33%;
+  justify-self: flex-end;
   cursor: pointer;
   :hover {
   }
