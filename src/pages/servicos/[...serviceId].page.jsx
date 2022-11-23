@@ -12,7 +12,7 @@ function Servico({ service }) {
     <>
       <Head
         title="Serviços Abertos - Santarém TI"
-        description="Pagina que lista os serviços que estão em aberto"
+        description="Página que exibe informações sobre o serviço"
       />
       <Section>
         <h1>Servico: {service.name}</h1>
