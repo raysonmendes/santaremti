@@ -2,15 +2,14 @@ import styled from "styled-components";
 export const ServicesCard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  max-width: 1200px;
-  min-width: 276px;
-  height: 7.5rem;
-  border: 1px solid #262626;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.262);
+  width: 300px;
+  height: 450px;
+  border: 1px solid rgba(0, 0, 0, 0.262);
+  border-radius: 10px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.262);
 
-  margin-top: 1rem;
-  justify-content: space-around;
+  justify-content: center;
   font-family: "Manrope", sans-serif;
   font-size: large;
+  padding: 1.5rem;
 `;

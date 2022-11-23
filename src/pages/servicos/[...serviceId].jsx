@@ -12,14 +12,13 @@ function Servico({ service }) {
         title="Serviços Abertos - Santarém TI"
         description="Pagina que lista os serviços que estão em aberto"
       />
-      <Container>
-        <Section>
-          <h1>Servico: {service.name}</h1>
-          <p>
-            <strong>Descrição</strong> : {service.description}
-          </p>
-        </Section>
-      </Container>
+
+      <Section>
+        <h1>Servico: {service.name}</h1>
+        <p>
+          <strong>Descrição</strong> : {service.description}
+        </p>
+      </Section>
     </>
   );
 }
