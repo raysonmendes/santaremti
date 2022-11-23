@@ -33,10 +33,10 @@ export default function Home() {
               Encontre os melhores profissionais de TI da nossa região.
             </TextP>
             <Sct_Button>
-              <CustomizedLink link={"/servicos/criar"}>
+              <CustomizedLink link={"/servicos/"}>
                 <BT1>Tornar-se Colaborador</BT1>
               </CustomizedLink>
-              <CustomizedLink link={"/servicos/"}>
+              <CustomizedLink link={"/servicos/criar"}>
                 <BT2>Contratar Serviços</BT2>
               </CustomizedLink>
             </Sct_Button>

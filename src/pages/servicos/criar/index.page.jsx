@@ -1,9 +1,17 @@
 import { unstable_getServerSession } from "next-auth";
 import React from "react";
 import Head from "../../../components/Head";
+import { PageTitle } from "../../../components/styleds";
+import Wrapper from "../../../components/wrapper";
 import { authOptions } from "../../api/auth/[...nextauth].page";
+import ServiceForm from "./components/service-form";
 
 function CreateService({ user }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log("recebi esses dados> ", event);
+  }
+
   return (
     <>
       <Head
@@ -11,7 +19,10 @@ function CreateService({ user }) {
         description="Página para criar um novo serviço na plataforma"
       />
 
-      <h1>Criar Serviço: {user.name}</h1>
+      <Wrapper center row>
+        <PageTitle>Qual serviço você quer contratar?</PageTitle>
+      </Wrapper>
+      <ServiceForm user={user} onSubmit={handleSubmit} />
     </>
   );
 }
