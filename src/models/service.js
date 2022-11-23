@@ -24,7 +24,7 @@ var service = new Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: "Users",
-    required: false,
+    required: true,
   },
   assignedTo: {
     type: Schema.Types.ObjectId,
