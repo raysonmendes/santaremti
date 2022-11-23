@@ -9,6 +9,7 @@
 // };
 
 module.exports = {
+  pageExtensions: ["page.jsx", "page.js"],
   images: {
     domains: ["res.cloudinary.com", "lh3.googleusercontent.com"],
   },
