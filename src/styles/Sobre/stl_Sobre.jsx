@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Section1 = styled.div`
   display: flex;
   max-width: 1200px;
-  min-width: 276px;
-  height: 100vh;
+  min-width: 576px;
+  width: 100vw;
   justify-self: center;
   align-self: center;
   justify-content: center;
