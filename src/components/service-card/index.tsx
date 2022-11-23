@@ -6,9 +6,18 @@ function ServiceCard({ data }) {
     <CustomizedLink link={`/servicos/${data._id}`} noneStyle={true}>
       <ServicesCard>
         <div></div>
-        <b>nome do serviço: {data.name}</b>
-        <p>description: {data.description}</p>
-        <time>data: {data.date}</time>
+        <p>
+          <b>Solicitante:</b> Não Identificado
+        </p>
+        <p>
+          <b>Serviço:</b> {data.name}
+        </p>
+        <p>
+          <b>Descrição:</b> {data.description}
+        </p>
+        <time>
+          <b>data: </b> {data.date}
+        </time>
       </ServicesCard>
     </CustomizedLink>
   );

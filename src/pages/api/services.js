@@ -1,7 +1,7 @@
 import { getToken } from "next-auth/jwt";
-import getServices from "../../lib/fetchServices";
 import connectToDatabse from "../../lib/mongodb";
 import Service from "../../models/service";
+import { getServices } from "../../lib/fetchServices";
 
 const secret = process.env.JWT_SECRET;
 

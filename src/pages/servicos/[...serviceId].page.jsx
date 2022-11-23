@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Head from "../../components/Head";
 import { getServiceById } from "../../lib/fetchServices";
+import { Section } from "../../styles/pg_Servicos/stl_Servicos";
 
 function Servico({ service }) {
   return (
@@ -10,10 +11,12 @@ function Servico({ service }) {
         title="Serviços Abertos - Santarém TI"
         description="Pagina que lista os serviços que estão em aberto"
       />
-      <h1>meu servico: {service.name}</h1>
-      <p>
-        <strong>descrição</strong> : {service.description}
-      </p>
+      <Section>
+        <h1>Servico: {service.name}</h1>
+        <p>
+          <strong>Descrição</strong> : {service.description}
+        </p>
+      </Section>
     </>
   );
 }
