@@ -13,6 +13,7 @@ import {
   Sct_Image,
 } from "../styles/pg_Home/stl_Home";
 import Image from "next/image";
+import CustomizedLink from "../components/customizedLink";
 //import { Section } from "../styles/stl_Body";
 
 export default function Home() {
@@ -32,8 +33,12 @@ export default function Home() {
               Encontre os melhores profissionais de TI da nossa região.
             </TextP>
             <Sct_Button>
-              <BT1>Tornar-se Colaborador</BT1>
-              <BT2>Contratar Serviços</BT2>
+              <CustomizedLink link={"/servicos/criar"}>
+                <BT1>Tornar-se Colaborador</BT1>
+              </CustomizedLink>
+              <CustomizedLink link={"/servicos/"}>
+                <BT2>Contratar Serviços</BT2>
+              </CustomizedLink>
             </Sct_Button>
           </Sct_SubIntro1>
           <Sct_Image>
