@@ -2,7 +2,7 @@ import React from "react";
 
 import Head from "../../components/Head";
 import { getServiceById } from "../../lib/fetchServices";
-import { Section } from "../../styles/pg_Servicos/stl_Servicos";
+import { Section } from "./styles";
 
 function Servico({ service }) {
   return (
