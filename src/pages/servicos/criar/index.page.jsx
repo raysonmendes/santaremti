@@ -1,6 +1,6 @@
 import { unstable_getServerSession } from "next-auth";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "../../../components/Head";
 import { PageTitle } from "../../../components/styleds";
 import Wrapper from "../../../components/wrapper";
@@ -8,9 +8,36 @@ import { api } from "../../../services/api";
 
 import { authOptions } from "../../api/auth/[...nextauth].page";
 import ServiceForm from "./components/service-form";
+import CustomizedLink from "../../../components/customizedLink";
+
+import { getUserByEmail } from "../../../lib/fetchUsers";
+
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement("#__next");
 
 function CreateService({ user }) {
+  const [isModalOpen, setModalOpen] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (user.tel === "" || user.cpf === "") {
+      setModalOpen(true);
+    }
+    console.log("usersef: ", user);
+  }, []);
 
   async function fetchUserByEmail(email) {
     try {
@@ -58,6 +85,24 @@ function CreateService({ user }) {
         <PageTitle>Qual serviço você quer contratar?</PageTitle>
       </Wrapper>
       <ServiceForm user={user} onSubmit={handleSubmit} />
+      <Modal
+        isOpen={isModalOpen}
+        style={customStyles}
+        contentLabel="Verification Modal"
+      >
+        <Wrapper flex column>
+          <strong>
+            Seu cadastro não está completo. Por favor, complete seu cadastro
+            para continuar!
+          </strong>
+          <Wrapper flex row>
+            <div onClick={() => router.back()}>Voltar à página anterior</div>
+            <CustomizedLink link={`/perfil/${user._id}/edit`}>
+              <div>Completar Cadastro</div>
+            </CustomizedLink>
+          </Wrapper>
+        </Wrapper>
+      </Modal>
     </>
   );
 }
@@ -82,8 +127,20 @@ export async function getServerSideProps(context) {
     };
   }
 
+  // busca no banco de dados o usuário logado
+  const user = await getUserByEmail(token.user.email);
+
+  if (!user) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/entrar",
+      },
+    };
+  }
+
   // retorna as props para o componente
   return {
-    props: { user: JSON.parse(JSON.stringify(token.user)) },
+    props: { user: JSON.parse(JSON.stringify(user[0])) },
   };
 }
