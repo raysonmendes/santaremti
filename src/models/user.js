@@ -28,10 +28,11 @@ var user = new Schema(
       required: false,
       default: "",
     },
-    roles: {
-      type: Array,
+    role: {
+      type: String,
+      enum: ["customer", "professional"],
       required: true,
-      default: ["client"],
+      default: "customer",
     },
     avatarUri: {
       type: String,

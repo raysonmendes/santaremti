@@ -19,7 +19,7 @@ var service = new Schema({
   },
   price: {
     type: Number,
-    required: true,
+    required: false,
   },
   owner: {
     type: Schema.Types.ObjectId,
