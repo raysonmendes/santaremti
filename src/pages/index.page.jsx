@@ -11,7 +11,7 @@ import {
   BT1,
   BT2,
   Sct_Image,
-} from "../styles/pg_Home/stl_Home";
+} from "../styles/homePage";
 import Image from "next/image";
 import CustomizedLink from "../components/customizedLink";
 //import { Section } from "../styles/stl_Body";
