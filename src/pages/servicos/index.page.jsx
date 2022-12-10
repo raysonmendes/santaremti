@@ -4,7 +4,7 @@ import ServiceCard from "../../components/service-card";
 
 import Head from "../../components/Head";
 
-import { Container } from "../../styles/pg_Servicos/stl_Servicos";
+import { Container } from "./styles";
 import { getServices } from "../../lib/fetchServices";
 
 function Servicos({ services }) {

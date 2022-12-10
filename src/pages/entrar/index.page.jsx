@@ -1,4 +1,4 @@
-import Head from "../components/Head";
+import Head from "../../components/head/index";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ import {
   Sct_Title,
   Section,
   Stc_SingIn,
-} from "../styles/pg_Entrar/stl_Entrar";
+} from "./styles";
 import { useRouter } from "next/router";
 
 export default function LoginPage() {

@@ -1,11 +1,5 @@
-import Head from "../components/Head";
-import {
-  Section1,
-  Sct_Image,
-  Sct_Text,
-  Title,
-  Text,
-} from "../styles/Sobre/stl_Sobre";
+import Head from "../../components/head/index";
+import { Section1, Sct_Image, Sct_Text, Title, Text } from "./styles";
 import Image from "next/image";
 
 function Sobre() {
