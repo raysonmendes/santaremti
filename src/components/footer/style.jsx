@@ -166,7 +166,7 @@ export const Text = styled.p`
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 16px;
   text-align: center;
   color: #000000;

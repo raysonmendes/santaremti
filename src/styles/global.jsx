@@ -18,6 +18,12 @@ export const GlobalStyle = createGlobalStyle`
         
     }
 
+    body *{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+
     body{
         background: --background;
     }
