@@ -20,83 +20,64 @@ export const Sct_Title = styled.div`
 export const Title1 = styled.h2`
   font-style: normal;
   font-weight: 600;
-  font-size: 3rem;
-  color: #212121;
-
-  font-family: "Montserrat", sans-serif;
+  font-size: 6.4rem;
+  color: #000000;
+  font-family: "Barlow", sans-serif;
 `;
 
 export const Sct_Intro = styled.div`
   display: flex;
   flex-direction: row;
-  //top: 0;
-
-  /* margin: auto; */
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  /* height: auto; */
-
+  width: 120rem;
   flex-wrap: wrap;
 `;
 
-// export const Title2 = styled.h2`
-//   padding-left: 10px;
-//   font-size: 48px;
-//   color: #223459;
-// `;
-
-export const Sct_SubIntro1 = styled.article`
+export const Sct_SubIntro1 = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  padding-top: 90px;
-  height: 100%;
-
-  @media (max-width: 1030px) {
-    height: auto;
-  }
+  width: 51.2rem;
 `;
 
 export const TextP = styled.p`
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3.2rem;
   line-height: 2.75rem;
-  color: #212121;
-  padding-bottom: 97px;
-  //width: 95%;
-  width: 481px;
-  height: 132px;
+  color: #000000;
+  width: 48.1rem;
+  height: 13.2rem;
 `;
 
-export const Sct_Button = styled.ul`
+/* Seção de Botões */
+export const Sct_Button = styled.div`
   display: flex;
-  flex-direction: row;
-  height: 64px;
+  height: 6.4rem;
   border: none;
   background: none;
-  margin-top: 65px;
-  width: 100%;
-
-  gap: 22px;
+  margin-top: 9rem;
+  width: 51.2rem;
+  gap: 2.2rem;
 `;
 
 export const BT1 = styled.button`
-  position: relative;
-  /* width: 45%; */
-  width: 15.3125rem;
-  height: 64px;
+  width: 24.5rem;
+  height: 6.4rem;
+
   background: #fafafa;
-  border: 1px solid #262626;
+  border: 1px solid #000000;
   box-shadow: 3px 4px 10px rgba(38, 38, 38, 0.25);
   border-radius: 8px;
-  left: 0;
-  margin: auto;
 
-  font-size: 1.25rem;
+  /* Fonte */
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
 
   &:hover {
     cursor: pointer;
@@ -104,28 +85,31 @@ export const BT1 = styled.button`
 `;
 
 export const BT2 = styled.button`
-  position: relative;
-  width: 15.3125rem;
-  height: 64px;
-  right: 0;
-  color: #fafafa;
-  background: #262626;
-  box-shadow: 3px 4px 10px rgba(34, 24, 116, 0.25);
+  width: 24.5rem;
+  height: 6.4rem;
+
+  background: #000000;
+  box-shadow: 3px 4px 10px rgba(38, 38, 38, 0.25);
   border-radius: 8px;
-  border: none;
-  margin: auto;
+
+  /* Fonte */
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fafafa;
+
   &:hover {
     cursor: pointer;
   }
 `;
 
 export const Sct_Image = styled.div`
-  /* position: relative; */
-  //top: 94px;
-  /* width: 50%; */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: auto;
+  width: 67.9rem;
+  height: 67.9rem;
 `;

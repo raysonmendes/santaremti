@@ -34,10 +34,10 @@ export default function Home() {
             </TextP>
             <Sct_Button>
               <CustomizedLink link={"/servicos/"}>
-                <BT1>Tornar-se Colaborador</BT1>
+                <BT1>Prestar Serviço</BT1>
               </CustomizedLink>
               <CustomizedLink link={"/servicos/criar"}>
-                <BT2>Contratar Serviços</BT2>
+                <BT2>Solicitar Serviço</BT2>
               </CustomizedLink>
             </Sct_Button>
           </Sct_SubIntro1>
@@ -46,8 +46,8 @@ export default function Home() {
               src={
                 "https://res.cloudinary.com/rayson/image/upload/v1654613155/Santarem%20TI/Home%20Page/img_Home.png"
               }
-              width={550}
-              height={550}
+              width={679}
+              height={679}
               objectFit={"cover"}
               layout="fixed"
             />
