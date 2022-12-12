@@ -1,4 +1,4 @@
-import Head from "../../components/head/index";
+import Head from "../../components/Head";
 import { Section1, Sct_Image, Sct_Text, Title, Text } from "./styles";
 import Image from "next/image";
 

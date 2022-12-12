@@ -3,20 +3,12 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 import {
-  Btn_Login,
   Btn_Google,
-  Checkbox,
   Container,
-  Sct_Email,
-  Sct_Forget,
   Sct_Logo,
-  Sct_Passworld,
-  Sct_Remember,
-  Sct_RememberForget,
   Sct_SubTitle,
   Sct_Title,
   Section,
-  Stc_SingIn,
 } from "./styles";
 import { useRouter } from "next/router";
 
@@ -57,22 +49,10 @@ export default function LoginPage() {
           </Sct_Logo>
           <Sct_Title>Bem Vindo</Sct_Title>
           <Sct_SubTitle>Faça o login da sua conta</Sct_SubTitle>
-          {/* <Sct_Email placeholder="E-mail" />
-          <Sct_Passworld placeholder="Senha" />
-          <Sct_RememberForget>
-            <Sct_Remember>
-              <Checkbox type="checkbox" />
-              Lembrar credênciais!
-            </Sct_Remember>
-            <Sct_Forget>Esqueceu a senha?</Sct_Forget>
-          </Sct_RememberForget>
-          <Btn_Login>Entrar</Btn_Login>
-          ou */}
           <Btn_Google onClick={handleSignGoogle}>
             <img src="/google-logo.svg" alt="me" width={20} height={20} />
             Entre com o Google
           </Btn_Google>
-          {/* <Stc_SingIn>Não me cadastrei ainda!</Stc_SingIn> */}
         </Section>
       </Container>
     </>
