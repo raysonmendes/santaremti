@@ -1,4 +1,4 @@
-import Head from "../../components/head/index";
+import Head from "../../components/head";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
