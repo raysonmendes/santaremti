@@ -1,6 +1,6 @@
-import Head from "../../components/head";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import Head from "../../components/Head/index";
 
 import {
   Btn_Google,
