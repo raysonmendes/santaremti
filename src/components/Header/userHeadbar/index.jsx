@@ -1,4 +1,4 @@
-import CustomizedLink from "../customizedLink";
+import CustomizedLink from "../../customizedLink";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 import {
@@ -12,7 +12,7 @@ import {
   Bt_Menu,
   Dropdown_Menu,
 } from "./styles";
-import Wrapper from "../wrapper";
+import Wrapper from "../../wrapper";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
@@ -69,9 +69,9 @@ const UserHeader = () => {
           <Image
             src={session?.user?.image}
             alt="Avatar do usuário"
-            width={"25px"}
-            height={"25px"}
-            style={{ borderRadius: "12.5px" }}
+            width={"35"}
+            height={"35"}
+            style={{ borderRadius: "50px" }}
           />
           <User_Name>
             <Wrapper>{getFirstName(session.user.name)}</Wrapper>

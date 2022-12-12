@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-self: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+  margin: 1.5rem;
 `;
 
 export const Section = styled.div`
@@ -16,5 +17,6 @@ export const Section = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   gap: 1rem;
 `;

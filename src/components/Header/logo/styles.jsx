@@ -14,7 +14,7 @@ export const Text = styled.h1`
   display: flex;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 2.4rem;
   line-height: 1.57rem;
   color: #040f0f;
 

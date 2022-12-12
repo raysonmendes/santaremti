@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  font-size: 12px;
+  font-size: 1.6rem;
   font-family: "Manrope", sans-serif;
   display: ${(props) =>
     props.center || props.column || props.row ? "flex" : "inherit"};

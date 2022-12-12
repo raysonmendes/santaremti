@@ -1,8 +1,10 @@
 import React from "react";
-import Menu from "../Menu";
-import Logo from "../Logo";
+// import Menu from "./Menu/index";
+// import Logo from "./Logo/index";
+import Logo from "../Header/logo";
+import Menu from "../Header/menu";
 import { StyledHeader, Container } from "./styles";
-import UserHeader from "../userHeadbar";
+import UserHeader from "./userHeadbar";
 // import ObjUser from "../User";
 
 function Header() {

@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         /* --background-dark: rgb(21, 32, 43);
         --title-dark: #fff;
         --text-dark: #fff; */
-        
+        font-size: 62.5%;
 
 
     }
@@ -16,6 +16,12 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         
+    }
+
+    body *{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
     }
 
     body{

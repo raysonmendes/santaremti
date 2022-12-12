@@ -24,7 +24,7 @@ export const Bt_LogIn = styled.div`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.78rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   text-align: center;
   color: #262626;
