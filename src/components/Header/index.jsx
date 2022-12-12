@@ -1,6 +1,6 @@
 import React from "react";
-import Menu from "./Menu";
-import Logo from "./Logo";
+import Menu from "./Menu/index";
+import Logo from "./Logo/index";
 import { StyledHeader, Container } from "./styles";
 import UserHeader from "./userHeadbar";
 // import ObjUser from "../User";
