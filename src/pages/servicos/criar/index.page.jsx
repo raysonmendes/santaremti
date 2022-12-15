@@ -48,7 +48,7 @@ function CreateService({ user }) {
   // recebe os dados do formulá e cria no banco de dados
   async function handleSubmit(event) {
     event.preventDefault();
-    const userId = "637caef1863c1d8855bbe11d";
+    const userId = user._id;
 
     // prepara o objeto com as informações do serviço
     const data = {

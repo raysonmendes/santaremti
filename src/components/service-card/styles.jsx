@@ -40,7 +40,7 @@ export const RequesterName = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  /* gap: 0.5rem; */
 
   width: 100%;
 
@@ -49,24 +49,34 @@ export const RequesterName = styled.div`
 `;
 
 export const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 8rem;
   font-family: "Manrope", sans-serif;
   font-size: 2rem;
   font-weight: 700;
+
+  max-width: 100%;
+
+  text-overflow: ellipsis; /* enables ellipsis */
+  white-space: nowrap; /* keeps the text in a single line */
+  overflow: hidden;
 `;
 
+export const ServiceTitleArea = styled.div``;
+
 export const Description = styled.div`
-  display: flex;
   flex-direction: column;
   padding: 0.5rem;
-
   width: 100%;
+
+  overflow: hidden;
   height: 25rem;
+`;
+
+export const DescriptionTitle = styled.div`
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10; /* start showing ellipsis when 3rd line is reached */
+  white-space: pre-wrap;
 `;
 
 export const Data = styled.div`
