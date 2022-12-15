@@ -1,15 +1,45 @@
 import Service from "../models/service";
+import { getUserById } from "./fetchUsers";
 import connectToDatabase from "./mongodb";
 
 //busca os serviços no banco de dados
 export const getServices = async () => {
   await connectToDatabase();
   try {
-    const response = await Service.find({});
+    let services = await Service.find({});
 
-    console.log("Executei services aqui hein");
+    services = JSON.parse(JSON.stringify(services));
 
-    return response;
+    // separa os ids dos owners em uma lista
+    let ownerIdList = services.map((service) => {
+      return service.owner;
+    });
+
+    // converte para resultados json
+    ownerIdList = JSON.parse(JSON.stringify(ownerIdList));
+
+    // prepara lista de requests para buscar os owners por id
+    let ownerRequests = ownerIdList.map(async (ownerId) => {
+      const ownerResponse = await getUserById(ownerId);
+      return ownerResponse;
+    });
+
+    // utiliza o Promise.all para fazer as reqs
+    let populedOwners = await Promise.all(ownerRequests);
+    populedOwners = JSON.parse(JSON.stringify(populedOwners));
+
+    // percorre a lista de services e popula os dados dos owners encontrados
+    let populedServices = services.map((service) => {
+      let populedOwner = populedOwners.find(
+        (populedOwner) => populedOwner?._id === service?.owner
+      );
+      return {
+        ...service,
+        owner: populedOwner ? populedOwner : "User desconhecido",
+      };
+    });
+
+    return populedServices;
   } catch (error) {
     return error;
   }

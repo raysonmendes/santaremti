@@ -4,34 +4,39 @@ import mongoose from "mongoose";
 //formato do service e com as operações que precisaremos fazer no banco de dados
 var Schema = mongoose.Schema;
 
-var service = new Schema({
-  name: {
-    type: String,
-    required: true,
+var service = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    duoDate: {
+      type: Date,
+      required: false,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: false,
+    },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "Users",
+      required: true,
+    },
+    assignedTo: {
+      type: Schema.Types.ObjectId,
+      ref: "Users",
+      required: false,
+    },
   },
-  duoDate: {
-    type: Date,
-    required: false,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: false,
-  },
-  owner: {
-    type: Schema.Types.ObjectId,
-    ref: "Users",
-    required: true,
-  },
-  assignedTo: {
-    type: Schema.Types.ObjectId,
-    ref: "Users",
-    required: false,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
 mongoose.models = {};
 
