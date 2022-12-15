@@ -27,11 +27,14 @@ function Servicos({ services }) {
 export default Servicos;
 
 export async function getStaticProps() {
-  const data = await getServices();
+  let data = await getServices();
+  data = JSON.parse(JSON.stringify(data));
+
+  console.log("services que peguei: ", data);
 
   return {
     props: {
-      services: JSON.parse(JSON.stringify(data)),
+      services: data,
     },
     revalidate: 20,
   };
