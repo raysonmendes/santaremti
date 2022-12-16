@@ -8,8 +8,11 @@ import { authOptions } from "../../api/auth/[...nextauth].page";
 // import { getUserByEmail } from "../../lib/fetchUsers";
 
 import Image from "next/image";
+import { SubmitBtn } from "./styles";
+import CustomizedLink from "../../../components/customizedLink";
 
 function ProfilePage({ user }) {
+  function handleGoToEdit() {}
   console.log("user: ", user);
   return (
     <>
@@ -43,6 +46,11 @@ function ProfilePage({ user }) {
         <Wrapper flex row padding="bottom">
           <Wrapper padding="right">Tipo de usuário:</Wrapper>
           <Wrapper>{user?.role}</Wrapper>
+        </Wrapper>
+        <Wrapper center flex row>
+          <CustomizedLink link={`/perfil/${user?._id}/edit`}>
+            <SubmitBtn>Editar perfil</SubmitBtn>
+          </CustomizedLink>
         </Wrapper>
       </Wrapper>
     </>

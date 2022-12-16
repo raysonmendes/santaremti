@@ -16,6 +16,7 @@
     "mongoose": "^6.6.5",
     "next": "^12.1.6",
     "next-auth": "^4.12.3",
+    "nookies": "^2.5.2",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

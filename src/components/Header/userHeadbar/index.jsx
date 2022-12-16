@@ -34,6 +34,7 @@ const UserHeader = () => {
 
   //faz logout da conta logada
   const handleLogout = () => {
+    localStorage.setItem("loggedUser", undefined);
     signOut();
   };
 
@@ -83,7 +84,9 @@ const UserHeader = () => {
           <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
             <ul>
               <li>
-                <Wrapper>Perfil</Wrapper>
+                <CustomizedLink link={`/profile/${session.user.email}`}>
+                  <Wrapper>Perfil</Wrapper>
+                </CustomizedLink>
               </li>
               <li onClick={handleLogout}>
                 <Wrapper>Sair</Wrapper>

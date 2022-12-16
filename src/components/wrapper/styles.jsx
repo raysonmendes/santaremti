@@ -23,4 +23,5 @@ export const Container = styled.div`
       : props.padding
       ? props.padding
       : "None"};
+  gap: ${(props) => props.gap && props.gap};
 `;

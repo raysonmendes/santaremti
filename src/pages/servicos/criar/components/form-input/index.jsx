@@ -9,6 +9,8 @@ function InputForm({
   inputPlaceholder,
   required,
   type,
+  value,
+  disabled,
 }) {
   return (
     <Wrapper column padding>
@@ -23,6 +25,7 @@ function InputForm({
         {inputLabel}
       </label>
       <input
+        disabled={disabled}
         type={type}
         id={inputId}
         name={inputName}
@@ -35,6 +38,7 @@ function InputForm({
           fontSize: "1rem",
           fontFamily: "inherit",
         }}
+        defaultValue={value}
       />
     </Wrapper>
   );
