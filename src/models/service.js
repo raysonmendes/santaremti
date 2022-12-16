@@ -13,7 +13,6 @@ var offer = new Schema({
   },
   accepted: {
     type: Boolean,
-    default: false,
   },
   offerer: {
     type: Schema.Types.ObjectId,

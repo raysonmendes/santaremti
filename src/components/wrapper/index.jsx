@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container } from "./styles";
 
-function Wrapper({ children, style, center, row, column, padding }) {
+function Wrapper({ children, style, center, row, column, padding, gap }) {
   return (
     <Container
       center={center}
@@ -10,6 +10,7 @@ function Wrapper({ children, style, center, row, column, padding }) {
       row={row}
       column={column}
       padding={padding}
+      gap={gap}
     >
       {children}
     </Container>
