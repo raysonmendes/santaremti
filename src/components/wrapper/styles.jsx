@@ -18,7 +18,9 @@ export const Container = styled.div`
   padding: ${(props) =>
     props.padding && paddingMap[props.padding]
       ? paddingMap[props.padding]
-      : props.padding
+      : props.padding === true
       ? "8px"
+      : props.padding
+      ? props.padding
       : "None"};
 `;
