@@ -15,6 +15,10 @@ import FormTextArea from "../criar/components/form-text-area";
 import { SubmitBtn } from "./components/offer-modal/styles";
 
 import Modal from "react-modal";
+import { api } from "../../../services/api";
+import { useRouter } from "next/router";
+
+import { toast } from "react-toastify";
 
 const customStyles = {
   content: {
@@ -32,12 +36,14 @@ Modal.setAppElement("#__next");
 
 function Servico({ service, user }) {
   const [isModalOfferOpen, setIsModalOfferOpen] = useState(false);
+  console.log("servicooo: ", service);
+  const router = useRouter();
 
   function toggleModalOffer() {
     setIsModalOfferOpen(!isModalOfferOpen);
   }
 
-  function handleSubmitOffer(event) {
+  async function handleSubmitOffer(event) {
     event.preventDefault();
     if (user.role !== "professional") {
       toggleModalOffer();
@@ -54,6 +60,14 @@ function Servico({ service, user }) {
       description: event.target["offer-description"].value,
     };
 
+    try {
+      const response = await api.post(`/services/${service._id}/offer`, data);
+
+      toast.success("Proposta realizada com sucesso!");
+      router.push("/servicos");
+    } catch (error) {
+      toast.error("Erro ao realizar proposta! " + error.message);
+    }
     console.log("dados preparados: ", data);
   }
 

@@ -3,8 +3,8 @@ import {
   deleteServiceById,
   getServiceById,
   updateServiceById,
-} from "../../../lib/fetchServices";
-import connectToDatabase from "../../../lib/mongodb";
+} from "../../../../lib/fetchServices";
+import connectToDatabase from "../../../../lib/mongodb";
 
 const secret = process.env.JWT_SECRET;
 

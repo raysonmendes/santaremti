@@ -26,7 +26,7 @@ function ServiceCard({ data }) {
     return formatedDate;
   }
 
-  console.log("veio data: ", data);
+  // console.log("veio data: ", data);
 
   return (
     <CustomizedLink link={`/servicos/${data._id}`} noneStyle={true}>
