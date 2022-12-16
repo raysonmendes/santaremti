@@ -4,6 +4,27 @@ import mongoose from "mongoose";
 //formato do service e com as operações que precisaremos fazer no banco de dados
 var Schema = mongoose.Schema;
 
+// tipagem de uma proposta
+var offer = new Schema({
+  offeredPrice: {
+    type: Number,
+    required: true,
+  },
+  accepted: {
+    type: Boolean,
+    default: false,
+  },
+  offerer: {
+    type: Schema.Types.ObjectId,
+    ref: "Users",
+    required: true,
+  },
+  description: {
+    type: String,
+    required: false,
+  },
+});
+
 var service = new Schema(
   {
     name: {
@@ -32,6 +53,7 @@ var service = new Schema(
       ref: "Users",
       required: false,
     },
+    offers: [offer],
   },
   {
     timestamps: true,
