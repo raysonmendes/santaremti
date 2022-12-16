@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import CustomizedLink from "../../../../components/customizedLink";
 import Wrapper from "../../../../components/wrapper";
 import { getUserByEmail } from "../../../../lib/fetchUsers";
+import { api } from "../../../../services/api";
 import { authOptions } from "../../../api/auth/[...nextauth].page";
 import InputForm from "../../../servicos/criar/components/form-input";
 // import { getUserByEmail } from "../../lib/fetchUsers";
@@ -16,7 +17,22 @@ function EditProfilePage({ user }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("formdata ", event);
+
+    const userId = user._id;
+
+    let data = {
+      name: event.target["name"].value,
+      tel: event.target["tel"].value,
+      cpf: event.target["cpf"].value,
+      role: event.target["type"].value,
+    };
+
+    try {
+      api.put(`/users/${userId}`, data);
+    } catch (error) {
+      alert("Erro ao editar usuário. Tente mais tarde! " + error.message);
+      console.log("erro ao atualiza usuário: ", error);
+    }
   }
   console.log("user: ", user);
   return (
@@ -77,7 +93,13 @@ function EditProfilePage({ user }) {
 
           <Wrapper flex row padding="bottom" center>
             <Wrapper padding center gap="5px">
-              <input type="radio" id="customer" name="type" value="customer" />
+              <input
+                type="radio"
+                id="customer"
+                name="type"
+                value="customer"
+                defaultChecked={user?.role === "customer"}
+              />
               <label htmlFor="customer">Cliente</label>
             </Wrapper>
             <Wrapper padding center gap="5px">
@@ -86,6 +108,7 @@ function EditProfilePage({ user }) {
                 id="professional"
                 name="type"
                 value="professional"
+                defaultChecked={user?.role === "professional"}
               />
               <label htmlFor="professional">Profissional</label>
             </Wrapper>

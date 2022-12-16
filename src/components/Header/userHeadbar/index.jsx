@@ -84,7 +84,10 @@ const UserHeader = () => {
           <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
             <ul>
               <li>
-                <CustomizedLink link={`/profile/${session.user.email}`}>
+                <CustomizedLink
+                  link={`/profile/${session.user.email}`}
+                  noneStyle
+                >
                   <Wrapper>Perfil</Wrapper>
                 </CustomizedLink>
               </li>
