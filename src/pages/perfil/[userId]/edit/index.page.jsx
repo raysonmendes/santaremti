@@ -10,12 +10,12 @@ import { authOptions } from "../../../api/auth/[...nextauth].page";
 import InputForm from "../../../servicos/criar/components/form-input";
 // import { getUserByEmail } from "../../lib/fetchUsers";
 
+import { toast } from "react-toastify";
+
 import { SubmitBtn } from "./styles";
 
 function EditProfilePage({ user }) {
-  function handleGoToEdit() {}
-
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const userId = user._id;
@@ -28,9 +28,13 @@ function EditProfilePage({ user }) {
     };
 
     try {
-      api.put(`/users/${userId}`, data);
+      const response = await api.put(`/users/${user._id}`, data);
+
+      toast.success("Perfil atualizado com sucesso!");
     } catch (error) {
       alert("Erro ao editar usuário. Tente mais tarde! " + error.message);
+
+      toast.error("Erro ao atualizar perfil! " + error.message);
       console.log("erro ao atualiza usuário: ", error);
     }
   }
