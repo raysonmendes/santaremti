@@ -6,6 +6,8 @@ import { PageTitle } from "../../../components/styleds";
 import Wrapper from "../../../components/wrapper";
 import { api } from "../../../services/api";
 
+import { toast } from "react-toastify";
+
 import { authOptions } from "../../api/auth/[...nextauth].page";
 import ServiceForm from "./components/service-form";
 import CustomizedLink from "../../../components/customizedLink";
@@ -65,11 +67,12 @@ function CreateService({ user }) {
         ...data,
       });
 
+      toast.success("Serviço postado com sucesso!");
       //   redireciona para a página de serviços
       router.push("/servicos");
     } catch (error) {
       console.log("Erro ao criar serviço: ", error);
-      alert("Erro ao cadastrar serviço! " + error.message);
+      toast.erro("Erro ao cadastrar serviço! " + error.message);
       return Promise.reject(error);
     }
   }

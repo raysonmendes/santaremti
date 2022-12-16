@@ -84,6 +84,8 @@ export const updateServiceById = async (id, data) => {
 
   const update = JSON.parse(data);
 
+  console.log("chegou esse id: ", id);
+
   try {
     const response = await Service.findByIdAndUpdate(id, update);
 

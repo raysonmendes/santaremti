@@ -35,6 +35,8 @@ const handler = async (req, res) => {
   if (req.method === "PUT") {
     if (token) {
       try {
+        // console.log("user atualizado: ", user);
+
         const user = await updateUserById(userId, data);
 
         return res.send(user);

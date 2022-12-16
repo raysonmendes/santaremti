@@ -30,8 +30,6 @@ export async function getStaticProps() {
   let data = await getServices();
   data = JSON.parse(JSON.stringify(data));
 
-  console.log("services que peguei: ", data);
-
   return {
     props: {
       services: data,

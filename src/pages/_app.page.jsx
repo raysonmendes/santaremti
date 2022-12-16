@@ -4,6 +4,9 @@ import { GlobalStyle } from "../styles/global";
 import { ContainerBody } from "../styles/stl_Body";
 import { SessionProvider } from "next-auth/react";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const MyApp = ({ Component, pageProps }) => {
   return (
     <SessionProvider>
@@ -14,6 +17,7 @@ const MyApp = ({ Component, pageProps }) => {
         </ContainerBody>
         <Footer />
         <GlobalStyle />
+        <ToastContainer />
       </>
     </SessionProvider>
   );
