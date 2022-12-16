@@ -16,7 +16,7 @@ var offer = new Schema({
     default: false,
   },
   offerer: {
-    type: mongoose.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
   description: {
@@ -45,12 +45,12 @@ var service = new Schema(
     },
     owner: {
       type: Schema.Types.ObjectId,
-      ref: "Users",
+      ref: "User",
       required: true,
     },
     assignedTo: {
       type: Schema.Types.ObjectId,
-      ref: "Users",
+      ref: "User",
       required: false,
     },
     offers: [offer],
