@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import User from "./user";
 
 // aqui estamos criando um modelo de um service do mongoose, que vai nos ajudar a lidar com o
 //formato do service e com as operações que precisaremos fazer no banco de dados
@@ -15,9 +16,8 @@ var offer = new Schema({
     default: false,
   },
   offerer: {
-    type: Schema.Types.ObjectId,
-    ref: "Users",
-    required: true,
+    type: mongoose.ObjectId,
+    ref: "User",
   },
   description: {
     type: String,
