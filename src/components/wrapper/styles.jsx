@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const paddingMap = {
-  top: "8px 0 0 0",
-  right: "0 8px 0 0",
-  bottom: "0 0 8px 0",
-  left: "0 0 0 8px",
+  top: "0.8rem 0 0 0",
+  right: "0 0.8rem 0 0",
+  bottom: "0 0 0.8rem 0",
+  left: "0 0 0 0.8rem",
 };
 
 export const Container = styled.div`
@@ -19,7 +19,7 @@ export const Container = styled.div`
     props.padding && paddingMap[props.padding]
       ? paddingMap[props.padding]
       : props.padding === true
-      ? "8px"
+      ? "0.8rem"
       : props.padding
       ? props.padding
       : "None"};

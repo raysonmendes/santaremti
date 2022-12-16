@@ -17,7 +17,7 @@ function InputForm({
       <label
         htmlFor={inputName}
         style={{
-          paddingBottom: "8px",
+          paddingBottom: "0.8rem",
           fontSize: "1rem",
           fontFamily: "inherit",
         }}
@@ -32,11 +32,18 @@ function InputForm({
         required={required}
         placeholder={inputPlaceholder}
         style={{
+          width: "24.4rem",
+          height: "3.4rem",
           padding: type === "date" ? "7px" : "8px",
-          border: "1px solid #000",
-          borderRadius: "4px",
-          fontSize: "1rem",
-          fontFamily: "inherit",
+          border: "0.1rem solid #000000",
+          borderRadius: "1rem",
+          fontFamily: "Manrope, sans-serif",
+          fontStyle: "normal",
+          fontWeight: "400",
+          fontSize: "1.6rem",
+          lineHeight: "2.4rem",
+          textAlign: "center",
+          color: "#000000",
         }}
         defaultValue={value}
       />

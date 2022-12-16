@@ -7,8 +7,17 @@ import Wrapper from "../../../components/wrapper";
 import CustomizedLink from "../../../components/customizedLink";
 import { getServiceById } from "../../../lib/fetchServices";
 import { authOptions } from "../../api/auth/[...nextauth].page";
-import { Section, FooterSection } from "./styles";
-import OfferForm from "./components/offer-modal";
+import {
+  Section,
+  LegendService,
+  TitleService,
+  SubTitleService,
+  DescriptionService,
+  ButtonSendOffer,
+  LegendOffer,
+  InputValueOffer,
+} from "./styles";
+//import OfferForm from "./components/offer-modal";
 import { getUserByEmail } from "../../../lib/fetchUsers";
 import InputForm from "../criar/components/form-input";
 import FormTextArea from "../criar/components/form-text-area";
@@ -19,6 +28,7 @@ import { api } from "../../../services/api";
 import { useRouter } from "next/router";
 
 import { toast } from "react-toastify";
+import { Container } from "../[serviceId]/styles";
 
 const customStyles = {
   content: {
@@ -77,22 +87,20 @@ function Servico({ service, user }) {
         title="Serviços Abertos - Santarém TI"
         description="Página que exibe informações sobre o serviço"
       />
-      <Wrapper flex row>
+      <Container>
         <Section>
-          <Wrapper padding="left">
-            <h3>Faça sua proposta</h3>
-          </Wrapper>
-          <h1>Servico: {service.name}</h1>
-          <p>
-            <strong>Descrição</strong> : {service.description}
-          </p>
+          <LegendService>
+            <h3>Solicitação</h3>
+          </LegendService>
+          <TitleService>{service.name}</TitleService>
+          <SubTitleService>Servico </SubTitleService>
+          <DescriptionService>{service.description}</DescriptionService>
         </Section>
 
-        <Wrapper flex column>
-          <Wrapper padding="left">
+        <Section>
+          <LegendOffer>
             <h3>Faça sua proposta</h3>
-          </Wrapper>
-
+          </LegendOffer>
           <Wrapper flex row>
             <form
               action="submit"
@@ -106,23 +114,24 @@ function Servico({ service, user }) {
                 textAreaLabel={"Descrição da Proposta"}
                 textAreaName={"offer-description"}
               />
-              <InputForm
-                type={"number"}
-                inputId={"offered-price"}
-                required={true}
-                inputName={"offered-price"}
-                formName={"offer-form"}
-                inputLabel="Valor da propsta*"
-                inputPlaceholder="Digite o valor"
-              />
-
-              <Wrapper padding="left">
+              <InputValueOffer>
+                <InputForm
+                  type={"number"}
+                  inputId={"offered-price"}
+                  required={true}
+                  inputName={"offered-price"}
+                  formName={"offer-form"}
+                  inputLabel="Valor da propsta*"
+                  inputPlaceholder="Digite o valor"
+                />
+              </InputValueOffer>
+              <ButtonSendOffer>
                 <SubmitBtn type="submit">Fazer proposta</SubmitBtn>
-              </Wrapper>
+              </ButtonSendOffer>
             </form>
           </Wrapper>
-        </Wrapper>
-      </Wrapper>
+        </Section>
+      </Container>
 
       <Modal
         isOpen={isModalOfferOpen}
