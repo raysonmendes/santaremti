@@ -68,7 +68,7 @@ export const getServiceById = async (id) => {
   await connectToDatabase();
 
   try {
-    const response = await Service.findById(id);
+    const response = await Service.findById(id).populate("owner");
 
     return response;
   } catch (error) {
@@ -81,8 +81,11 @@ export const getServiceById = async (id) => {
 // recebe um id e atualiza o serviço no banco de dados
 export const updateServiceById = async (id, data) => {
   await connectToDatabase();
+
+  const update = JSON.parse(data);
+
   try {
-    const response = await Service.findByIdAndUpdate(id, data);
+    const response = await Service.findByIdAndUpdate(id, update);
 
     const service = await getServiceById(id);
     return service;

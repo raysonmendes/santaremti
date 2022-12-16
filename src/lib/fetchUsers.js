@@ -51,8 +51,10 @@ export const getUserById = async (id) => {
 // recebe um id e atualiza o usuário no banco de dados
 export const updateUserById = async (id, data) => {
   await connectToDatabase();
+
+  const updateData = JSON.parse(data);
   try {
-    const response = await User.findByIdAndUpdate(id, data);
+    const response = await User.findByIdAndUpdate(id, updateData);
 
     const user = await getUserById(id);
     return user;
