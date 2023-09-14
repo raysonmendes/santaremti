@@ -2,7 +2,7 @@ import React from "react";
 // import Menu from "./Menu/index";
 // import Logo from "./Logo/index";
 import Logo from "../Header/logo";
-import Menu from "../Header/menu";
+import Menu from "../header/menu";
 import { StyledHeader, Container } from "./styles";
 import UserHeader from "./userHeadbar";
 // import ObjUser from "../User";
