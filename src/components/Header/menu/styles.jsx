@@ -25,9 +25,8 @@ export const Text = styled.h1`
   //margin: auto;
   text-align: center;
   &:hover {
-    font-weight: 700;
+    border-bottom: 0.3rem solid #040f0f;
+    border-radius: 5px;
     cursor: pointer;
-  }
-  &:active {
   }
 `;
