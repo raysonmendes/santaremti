@@ -13,7 +13,7 @@ import CustomizedLink from "../../../components/customizedLink";
 
 function ProfilePage({ user }) {
   function handleGoToEdit() {}
-  console.log("user: ", user);
+  // console.log("user: ", user);
   return (
     <>
       <h2>Meu perfil</h2>
