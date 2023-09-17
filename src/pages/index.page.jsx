@@ -48,8 +48,8 @@ export default function Home() {
               }
               width={679}
               height={679}
-              objectFit={"cover"}
-              layout="fixed"
+              alt="Uma imagem com o desenho de uma pessoa que trabalha na area de T.I. refletindo sobre algo"
+              priority={true}
             />
           </Sct_Image>
         </Sct_Intro>
