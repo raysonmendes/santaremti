@@ -64,7 +64,7 @@ const UserHeader = () => {
   }
 
   return (
-    <Container>
+    <Container onClick={toggleDropdownMenu}>
       {session ? (
         <Logged>
           <Image
@@ -77,15 +77,15 @@ const UserHeader = () => {
           <User_Name>
             <Wrapper>{getFirstName(session.user.name)}</Wrapper>
           </User_Name>
-          <Bt_Menu onClick={toggleDropdownMenu} ref={buttonMenuRef}>
+          <Bt_Menu ref={buttonMenuRef}>
             <img src="/down.svg" alt="dropdown button" />
           </Bt_Menu>
 
           <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
             <ul>
-              <li>
+              <li onClick={toggleDropdownMenu}>
                 <CustomizedLink
-                  link={`/profile/${session.user.email}`}
+                  link={`/perfil/${session.user.email}`}
                   noneStyle
                 >
                   <Wrapper>Perfil</Wrapper>
