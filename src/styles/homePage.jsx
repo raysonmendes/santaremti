@@ -109,7 +109,8 @@ export const Sct_Image = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
+  overflow: hidden;
   width: 67.9rem;
   height: 67.9rem;
 `;
