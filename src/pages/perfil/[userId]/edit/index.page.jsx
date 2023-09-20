@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 
 import { SubmitBtn } from "./styles";
 
-function EditProfilePage({ user }) {
+export function EditProfilePage({ user }) {
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -131,6 +131,7 @@ export default EditProfilePage;
 // busca dados do serviço específico
 export async function getServerSideProps(context) {
   // busca o token do usuário logado
+
   const token = await unstable_getServerSession(
     context.req,
     context.res,
@@ -147,6 +148,7 @@ export async function getServerSideProps(context) {
   }
 
   let user;
+
   // busca o usuário no banco de dados
   try {
     user = await getUserByEmail(token.user.email);
