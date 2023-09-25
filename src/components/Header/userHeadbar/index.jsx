@@ -84,7 +84,7 @@ const UserHeader = () => {
 
           <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
             <ul>
-              <li onClick={toggleDropdownMenu}>
+              <li>
                 <CustomizedLink
                   link={`/perfil/${session.user.email}`}
                   noneStyle
