@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from "next-auth";
+import { getServerSession } from "next-auth";
 import React, { useEffect, useState } from "react";
 import { getUserByEmail } from "../../../lib/fetchUsers";
 import { authOptions } from "../../api/auth/[...nextauth].page";
@@ -14,6 +14,7 @@ import {
   MenuItem,
   Select,
   TextField,
+  ThemeProvider,
   Typography,
 } from "@mui/material";
 
@@ -45,17 +46,21 @@ function ProfilePage({ user }) {
 
   return (
     <>
-      {" "}
-      <Container
+      <Box
         className="userInformations"
-        sx={{ minHeight: "80vh", paddingTop: 5 }}
+        sx={{
+          width: "100%",
+          minHeight: "80vh",
+          marginBlock: "1rem",
+          padding: "4rem",
+          borderRadius: "0.4rem",
+          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+        }}
       >
         <Typography
+          variant="h2"
           sx={{
-            fontSize: 28,
-            fontWeight: 700,
             marginInline: 2.5,
-            borderBottom: "1px solid #000",
           }}
         >
           Informações do usuário
@@ -63,6 +68,7 @@ function ProfilePage({ user }) {
         <Box
           sx={{
             display: "flex",
+            flexWrap: "wrap",
             marginTop: 10,
             justifyContent: "space-around",
           }}
@@ -73,6 +79,7 @@ function ProfilePage({ user }) {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              marginBottom: "1.5rem",
               padding: 2.5,
               borderRadius: 10,
               border: "1px solid #000",
@@ -88,7 +95,10 @@ function ProfilePage({ user }) {
               height={"90"}
               style={{ borderRadius: "50px" }}
             />
-            <Typography sx={{ fontSize: 24, fontWeight: "600", marginTop: 3 }}>
+            <Typography
+              variant="h4"
+              sx={{ fontSize: 24, fontWeight: "600", marginTop: 3 }}
+            >
               {" "}
               {user?.name}
             </Typography>
@@ -135,6 +145,7 @@ function ProfilePage({ user }) {
           >
             <form name="edit-user-form" onSubmit={handleSubmit}>
               <Typography
+                variant="h3"
                 sx={{ fontSize: 24, fontWeight: "600", marginLeft: 1 }}
               >
                 Editar Perfil.
@@ -184,8 +195,12 @@ function ProfilePage({ user }) {
                     label="Tipo de Perfil"
                     defaultValue={user?.role}
                   >
-                    <MenuItem value={"customer"}>Cliente</MenuItem>
-                    <MenuItem value={"professional"}>Profissional</MenuItem>
+                    <MenuItem type="input" value={"customer"}>
+                      Cliente
+                    </MenuItem>
+                    <MenuItem type="input" value={"professional"}>
+                      Profissional
+                    </MenuItem>
                   </Select>
                 </FormControl>
                 <Button variant="outlined" type="submit">
@@ -195,22 +210,28 @@ function ProfilePage({ user }) {
             </form>
           </Box>
         </Box>
-      </Container>
-      <Container
+      </Box>
+      <Box
         className="userServices"
-        sx={{ minHeight: "80vh", paddingTop: 5 }}
+        sx={{
+          width: "100%",
+          minHeight: "80vh",
+          marginBlock: "1rem",
+          padding: "4rem",
+          borderRadius: "0.4rem",
+          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+        }}
       >
         <Typography
+          variant="h2"
           sx={{
-            fontSize: 28,
-            fontWeight: 700,
             marginInline: 2.5,
             borderBottom: "1px solid #000",
           }}
         >
           Serviços do usuário
         </Typography>
-      </Container>
+      </Box>
     </>
   );
 }
@@ -220,11 +241,7 @@ export default ProfilePage;
 // busca dados do serviço específico
 export async function getServerSideProps(context) {
   // busca o token do usuário logado
-  const token = await unstable_getServerSession(
-    context.req,
-    context.res,
-    authOptions
-  );
+  const token = await getServerSession(context.req, context.res, authOptions);
   // verifica se o user está logado, caso contrário, redireciona para o login
   if (!token) {
     return {
