@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 24px;
     }
 
-    h1, h2, h3, h4, h5, stron {
+    h1, h2, h3, h4, h5, strong {
         font-weight: 600;
     }
 
