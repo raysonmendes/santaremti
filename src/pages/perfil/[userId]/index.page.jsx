@@ -54,7 +54,6 @@ function ProfilePage({ user }) {
           marginBlock: "1rem",
           padding: "4rem",
           borderRadius: "0.4rem",
-          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
         }}
       >
         <Typography
@@ -219,14 +218,12 @@ function ProfilePage({ user }) {
           marginBlock: "1rem",
           padding: "4rem",
           borderRadius: "0.4rem",
-          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
         }}
       >
         <Typography
           variant="h2"
           sx={{
             marginInline: 2.5,
-            borderBottom: "1px solid #000",
           }}
         >
           Serviços do usuário
