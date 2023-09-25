@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import Header from "../components/Header";
-import { ColorModeProvider } from "../contexts/colorModeContext";
+import { AppThemeProvider, ColorModeProvider } from "../contexts/ThemeContext";
 import { GlobalStyle } from "../styles/global";
 import { ContainerBody } from "../styles/stl_Body";
 import { SessionProvider } from "next-auth/react";
@@ -11,17 +11,13 @@ import "react-toastify/dist/ReactToastify.css";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <SessionProvider>
-      <ColorModeProvider>
+      <AppThemeProvider>
         <>
-          <Header />
-          <ContainerBody>
-            <Component {...pageProps} />
-          </ContainerBody>
-          <Footer />
+          <Component {...pageProps} />
           <GlobalStyle />
           <ToastContainer />
         </>
-      </ColorModeProvider>
+      </AppThemeProvider>
     </SessionProvider>
   );
 };
