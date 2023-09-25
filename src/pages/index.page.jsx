@@ -14,7 +14,6 @@ import {
 } from "../styles/homePage";
 import Image from "next/image";
 import CustomizedLink from "../components/customizedLink";
-//import { Section } from "../styles/stl_Body";
 
 export default function Home() {
   return (
