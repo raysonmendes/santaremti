@@ -16,6 +16,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import Head from "../../../components/Head";
 
 function ProfilePage({ user }) {
   console.log("Dando uma olhado dentro do user: ", user);
@@ -46,6 +47,7 @@ function ProfilePage({ user }) {
 
   return (
     <>
+      <Head />
       <Box
         className="userInformations"
         sx={{
