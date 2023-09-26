@@ -1,25 +1,25 @@
 import { getServerSession } from "next-auth";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { getUserByEmail } from "../../../lib/fetchUsers";
 import { authOptions } from "../../api/auth/[...nextauth].page";
 import { api } from "../../../services/api";
 import { toast } from "react-toastify";
 import Image from "next/image";
+
 import {
   Box,
   Button,
-  Container,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
-  ThemeProvider,
   Typography,
 } from "@mui/material";
 
 function ProfilePage({ user }) {
   console.log("Dando uma olhado dentro do user: ", user);
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -111,22 +111,40 @@ function ProfilePage({ user }) {
               }}
             >
               <Box sx={{ display: "flex", gap: 1 }}>
-                <Typography sx={{ fontWeight: "bold", fontSize: 16 }}>
+                <Typography
+                  variant="h5"
+                  sx={{ fontWeight: "bold", fontSize: 16 }}
+                >
                   Whatsapp:
                 </Typography>
-                <Typography sx={{ fontSize: 16 }}>{user?.tel}</Typography>
+                <Typography variant="body2" sx={{ fontSize: 16 }}>
+                  {user?.tel}
+                </Typography>
               </Box>
               <Box sx={{ display: "flex", gap: 1 }}>
-                <Typography sx={{ fontWeight: "bold", fontSize: 16 }}>
+                <Typography
+                  variant="h5"
+                  sx={{ fontWeight: "bold", fontSize: 16 }}
+                >
                   E-mail:
                 </Typography>
-                <Typography sx={{ fontSize: 16 }}>{user?.email}</Typography>
+                <Typography variant="body2" sx={{ fontSize: 16 }}>
+                  {user?.email}
+                </Typography>
               </Box>
               <Box sx={{ display: "flex", gap: 1 }}>
-                <Typography sx={{ fontWeight: "bold", fontSize: 16 }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 16,
+                  }}
+                >
                   Perfil:
                 </Typography>
-                <Typography sx={{ fontSize: 16 }}>{user?.role}</Typography>
+                <Typography variant="body2" fontSize={16}>
+                  {user?.role}
+                </Typography>
               </Box>
             </Box>
           </Box>

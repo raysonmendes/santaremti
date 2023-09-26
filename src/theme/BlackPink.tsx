@@ -2,30 +2,36 @@ import { createTheme } from "@mui/material";
 
 export const blackPink = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      light: "#F5A6B9",
+      light: "#F75E81",
       main: "#F5A6B9",
-      contrastText: "#fff",
+      dark: "#C28492",
+      contrastText: "#752D3E",
     },
-    background: { default: "#000000", paper: "#F5A6B9" },
+    secondary: {
+      light: "#782A3C",
+      main: "#F8567B",
+      dark: "#F9A2B6",
+      contrastText: "#C44563",
+    },
+    background: { default: "#000000", paper: "#752D3E" },
+    text: { primary: "#F5A6B9", secondary: "#F8567B" },
   },
   typography: {
+    allVariants: {
+      WebkitTextFillColor: "#F5A6B9",
+    },
     body1: {
-      fontFamily: "Monrope",
+      fontFamily: '"Montserrat", sans-serif',
       fontSize: 16,
-      color: "#F5A6B9",
+      fontWeight: 400,
+      color: "theme.palette.primary",
     },
     h2: {
       fontFamily: '"Barlow", sans-serif',
       fontSize: 28,
       fontWeight: 600,
-    },
-  },
-  components: {
-    MuiIconButton: {
-      styleOverrides: {
-        root: { ":hover": { background: "none" } },
-      },
     },
   },
 });
