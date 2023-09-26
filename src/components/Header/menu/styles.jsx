@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  width: 238.59px;
+  gap: 3.5rem;
+
   //align-self: center;
   justify-self: center;
 `;
