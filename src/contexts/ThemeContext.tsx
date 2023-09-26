@@ -5,7 +5,7 @@ import React, {
   useMemo,
   useContext,
 } from "react";
-import { Box, Grid, ThemeProvider } from "@mui/material";
+import { Box, Container, Grid, ThemeProvider } from "@mui/material";
 import { blackInWhite, blackPink } from "../theme";
 import Footer from "../components/footer";
 import Header from "../components/Header";
@@ -47,19 +47,18 @@ export const AppThemeProvider = ({ children }) => {
           bgcolor={theme.palette.background.default}
         >
           <Header />
-          <Grid
-            container
-            sx={{
-              height: "90vh",
-              overflowY: "auto",
-            }}
-          >
-            <Grid item xs={2}></Grid>
-            <Grid item xs={8} alignItems={"center"}>
-              {children}
-            </Grid>
-            <Grid item xs={2}></Grid>
-          </Grid>
+          <Box width={"100%"} overflow={"auto"}>
+            <Container>
+              <Box
+                display={"flex"}
+                flexDirection={"column"}
+                height={"90vh"}
+                pt={14}
+              >
+                {children}
+              </Box>
+            </Container>
+          </Box>
           <Footer />
         </Box>
       </ThemeProvider>
