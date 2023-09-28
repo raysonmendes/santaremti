@@ -16,6 +16,8 @@ import Wrapper from "../../wrapper";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SwitchTheme from "../switchTheme";
+import { Avatar, Icon, Typography } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const UserHeader = () => {
   const { data: session } = useSession();
@@ -68,35 +70,51 @@ const UserHeader = () => {
     <Container onClick={toggleDropdownMenu}>
       {session ? (
         <Logged>
-          <Image
-            src={session?.user?.image}
-            alt="Avatar do usuário"
-            width={"35"}
-            height={"35"}
-            style={{ borderRadius: "50px" }}
-          />
+          <Avatar src={session?.user?.image} />
+
           <User_Name>
-            <Wrapper>{getFirstName(session.user.name)}</Wrapper>
+            <Wrapper>
+              <Typography
+                variant="h2"
+                component="h6"
+                fontFamily={"Montserrat"}
+                fontSize={16}
+              >
+                {getFirstName(session.user.name)}
+              </Typography>
+            </Wrapper>
           </User_Name>
           <Bt_Menu ref={buttonMenuRef}>
-            <img src="/down.svg" alt="dropdown button" />
+            <KeyboardArrowDownIcon />
           </Bt_Menu>
 
           <Dropdown_Menu isMenuOpen={isMenuOpen} ref={dropdownMenuRef}>
             <ul>
-              <li onClick={toggleDropdownMenu}>
+              <li>
                 <CustomizedLink
                   link={`/perfil/${session.user.email}`}
                   noneStyle
                 >
-                  <Wrapper>Perfil</Wrapper>
+                  <Typography
+                    variant="button"
+                    fontFamily={"Montserrat"}
+                    fontSize={16}
+                  >
+                    Perfil
+                  </Typography>
                 </CustomizedLink>
               </li>
               <li>
                 <SwitchTheme />
               </li>
               <li onClick={handleLogout}>
-                <Wrapper>Sair</Wrapper>
+                <Typography
+                  variant="button"
+                  fontFamily={"Montserrat"}
+                  fontSize={16}
+                >
+                  Sair
+                </Typography>
               </li>
             </ul>
           </Dropdown_Menu>
