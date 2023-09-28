@@ -5,7 +5,7 @@ import React, {
   useMemo,
   useContext,
 } from "react";
-import { Box, Container, Grid, ThemeProvider } from "@mui/material";
+import { Box, Container, ThemeProvider } from "@mui/material";
 import { blackInWhite, blackPink } from "../theme";
 import Footer from "../components/footer";
 import Header from "../components/Header";

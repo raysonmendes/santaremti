@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import CustomizedLink from "../components/customizedLink";
 import { Box, Button, Typography } from "@mui/material";
+import { Padding } from "@mui/icons-material";
 
 export default function Home() {
   return (
@@ -31,7 +32,8 @@ export default function Home() {
         alignItems={"center"}
       >
         <Typography
-          variant="h3"
+          variant="h2"
+          component="h3"
           fontFamily={"Barlow"}
           fontSize={64}
           fontStyle={"normal"}
@@ -42,7 +44,12 @@ export default function Home() {
         </Typography>
 
         <Box display={"flex"} width={"100%"} gap={1} alignItems={"center"}>
-          <Box display={"flex"} flexDirection={"column"} flexBasis={"50%"}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            flexBasis={"50%"}
+            gap={12}
+          >
             <Typography
               variant="body1"
               fontFamily={"Manrope"}
@@ -53,9 +60,47 @@ export default function Home() {
             >
               Encontre os melhores profissionais de TI da nossa região.
             </Typography>
-            <Box display={"flex"}>
-              <Button variant="outlined">Prestar Serviço</Button>
-              <Button variant="contained"> Solicitar Serviço</Button>
+            <Box display={"flex"} gap={2.75}>
+              <Button
+                variant="outlined"
+                sx={{
+                  paddingBlock: "1.25rem",
+                  paddingInline: "2rem",
+                  borderRadius: "8px",
+                  ":hover": 'backgroundColor:"#000"',
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  fontFamily="Manrope"
+                  fontSize="1.25rem"
+                  fontStyle="normal"
+                  fontWeight={400}
+                  lineHeight={"120%"}
+                >
+                  Prestar Serviço
+                </Typography>
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  paddingBlock: "1.25rem",
+                  paddingInline: "2rem",
+                  borderRadius: "8px",
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  fontFamily="Manrope"
+                  fontSize="1.25rem"
+                  fontStyle="normal"
+                  fontWeight={400}
+                  lineHeight={"120%"}
+                  color={"background.default"}
+                >
+                  Solicitar Serviço
+                </Typography>
+              </Button>
             </Box>
           </Box>
           <Box
@@ -76,38 +121,6 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-
-      {/* <Section1>
-        <Sct_Title>
-          <Title1>Bem vindo à Santarém TI</Title1>
-        </Sct_Title>
-        <Sct_Intro>
-          <Sct_SubIntro1>
-            <TextP>
-              Encontre os melhores profissionais de TI da nossa região.
-            </TextP>
-            <Sct_Button>
-              <CustomizedLink link={"/servicos/"}>
-                <BT1>Prestar Serviço</BT1>
-              </CustomizedLink>
-              <CustomizedLink link={"/servicos/criar"}>
-                <BT2>Solicitar Serviço</BT2>
-              </CustomizedLink>
-            </Sct_Button>
-          </Sct_SubIntro1>
-          <Sct_Image>
-            <Image
-              src={
-                "https://res.cloudinary.com/rayson/image/upload/v1654613155/Santarem%20TI/Home%20Page/img_Home.png"
-              }
-              width={679}
-              height={679}
-              alt="Uma imagem com o desenho de uma pessoa que trabalha na area de T.I. refletindo sobre algo"
-              priority={true}
-            />
-          </Sct_Image>
-        </Sct_Intro>
-      </Section1> */}
     </>
   );
 }
