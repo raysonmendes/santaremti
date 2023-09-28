@@ -74,7 +74,12 @@ const UserHeader = () => {
 
           <User_Name>
             <Wrapper>
-              <Typography variant="h6" fontFamily={"Montserrat"} fontSize={16}>
+              <Typography
+                variant="h2"
+                component="h6"
+                fontFamily={"Montserrat"}
+                fontSize={16}
+              >
                 {getFirstName(session.user.name)}
               </Typography>
             </Wrapper>
