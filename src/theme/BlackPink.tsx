@@ -16,22 +16,34 @@ export const blackPink = createTheme({
       contrastText: "#C44563",
     },
     background: { default: "#000000", paper: "#752D3E" },
-    text: { primary: "#F5A6B9", secondary: "#F8567B" },
   },
   typography: {
-    allVariants: {
-      WebkitTextFillColor: "#F5A6B9",
-    },
     body1: {
-      fontFamily: '"Montserrat", sans-serif',
+      color: "#F5A6B9",
+      fontFamily: '"Manrope", sans-serif',
       fontSize: 16,
       fontWeight: 400,
-      color: "theme.palette.primary",
     },
     h2: {
+      color: "#F5A6B9",
       fontFamily: '"Barlow", sans-serif',
       fontSize: 28,
       fontWeight: 600,
+    },
+    button: {
+      color: "#F5A6B9",
+      fontFamily: '"Montserrat", sans-serif',
+      fontSize: 16,
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+    },
+  },
+  components: {
+    MuiIconButton: {
+      styleOverrides: {
+        root: { ":hover": { background: "none" } },
+      },
     },
   },
 });

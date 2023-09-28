@@ -8,7 +8,7 @@ export const blackInWhite = createTheme({
       light: "#4D4D4D",
       main: "#000000",
       dark: "#FFFFFF",
-      contrastText: "#999999",
+      contrastText: "#fff",
     },
     secondary: {
       light: "#40F56D",
@@ -16,19 +16,28 @@ export const blackInWhite = createTheme({
       dark: "#1E7534",
       contrastText: "#89F5A4",
     },
-    background: { default: "#FAFAFA", paper: "#FAFAFA" },
+    background: { default: "#FAFAFA", paper: "#a6a6a6" },
   },
   typography: {
     body1: {
-      fontFamily: '"Montserrat", sans-serif',
+      color: "#000000",
+      fontFamily: '"Manrope", sans-serif',
       fontSize: 16,
       fontWeight: 400,
-      color: "theme.palette.primary",
     },
     h2: {
+      color: "#000000",
       fontFamily: '"Barlow", sans-serif',
       fontSize: 28,
       fontWeight: 600,
+    },
+    button: {
+      color: "#000000",
+      fontFamily: '"Montserrat", sans-serif',
+      fontSize: 16,
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
     },
   },
   components: {
