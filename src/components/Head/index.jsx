@@ -23,24 +23,6 @@ function Head({ title, description }) {
           rel="shortcut icon"
           href="https://res.cloudinary.com/rayson/image/upload/v1655049181/Santarem%20TI/FaveIcon/favicon.ico"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        ></link>
       </NextHead>
     </>
   );
