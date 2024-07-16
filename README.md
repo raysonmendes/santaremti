@@ -11,3 +11,4 @@ It is a project to obtain a grade for the Course Completion Work (TCC), of the I
 Santarém TI is a platform that aims to mediate the contact of IT professionals with people who need this type of service.
 
 testando integração com clickup
+{c: green} olá {/c}
