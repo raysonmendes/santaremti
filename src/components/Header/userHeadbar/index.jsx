@@ -15,7 +15,6 @@ import {
 import Wrapper from "../../wrapper";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import SwitchTheme from "../switchTheme";
 
 const UserHeader = () => {
   const { data: session } = useSession();
@@ -91,9 +90,6 @@ const UserHeader = () => {
                 >
                   <Wrapper>Perfil</Wrapper>
                 </CustomizedLink>
-              </li>
-              <li>
-                <SwitchTheme />
               </li>
               <li onClick={handleLogout}>
                 <Wrapper>Sair</Wrapper>
